@@ -1,0 +1,41 @@
+@import "header.css";
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.view {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 500vh;
+}
+section {
+  position: relative;
+  height: 900px;
+}
+.first-section {
+  width: 100%;
+}
+.first-section__box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.first-section__title {
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+.first-section__menu {
+  display: flex;
+  list-style: none;
+}
+.first-section__menu li {
+  padding: 8px 20px;
+  font-size: 20px;
+}
