@@ -1,0 +1,31 @@
+.first-section {
+  display: flex;
+  justify-content: center;
+}
+.first-section__wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  height: 70%;
+}
+.first-section__title {
+  font-size: 8em;
+  margin-bottom: 70px;
+}
+.first-section__menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0;
+}
+.first-section__menu li {
+  font-size: 1.5em;
+}
+.first-section__wrap p {
+  position: relative;
+  text-align: center;
+  top: 20%;
+  font-size: 1.4em;
+  text-decoration: underline;
+}
