@@ -1,4 +1,4 @@
-.third-section__wrap {
+.forth-section__wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6,11 +6,11 @@
   width: 100%;
   overflow: hidden;
 }
-.third-section__title {
+.forth-section__title {
   text-align: center;
   font-size: 5em;
 }
-.third-section__slides img {
+.forth-section__slides img {
   width: 40vw;
 }
 .program-page {
@@ -18,14 +18,14 @@
   justify-content: space-evenly;
   height: 100%;
 }
-.third-section__content {
+.forth-section__content {
   width: 40vw;
 }
-.third-section__slides--sentence {
+.forth-section__slides--sentence {
   height: 100%;
   font-size: 1.4em;
 }
-.third-section__slides--tilte {
+.forth-section__slides--tilte {
   font-size: 1.7em;
 }
 .controls {
@@ -44,7 +44,7 @@
   font-weight: 600;
   transition: 0.25s;
 }
-.third-section__wrap p {
+.forth-section__wrap p {
   margin-bottom: 5%;
   margin-top: 3%;
   text-align: center;
