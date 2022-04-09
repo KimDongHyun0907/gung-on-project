@@ -23,8 +23,8 @@ const sentence = [
     }
 ]
 /* title content 초기값 지정*/ 
-const title = document.querySelector(".third-section__slides--tilte");
-const content = document.querySelector(".third-section__slides--sentence");
+const title = document.querySelector(".forth-section__slides--tilte");
+const content = document.querySelector(".forth-section__slides--sentence");
 chosenSentence=sentence[0];
 title.innerHTML = chosenSentence.title;
 content.innerText = chosenSentence.content;
@@ -35,7 +35,7 @@ const imgLength = imges.length;
 let count = 0;
 let chosenImage = imges[0];
 let pgImage = document.createElement("img");
-const slide=document.querySelector(".third-section__slides");
+const slide=document.querySelector(".forth-section__slides");
 pgImage.src = `${chosenImage}`;
 slide.appendChild(pgImage);
 
