@@ -24,8 +24,20 @@ var upload = multer({
     }
 });
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/frontend'));
 app.use('/images', express.static('images'));
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/login.html'));
+});
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/register.html'));
+});
+
+app.get('/upload', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/upload.html'));
+});
 
 //URL change to /upload once image is successfully uploaded.
 app.post('/upload', upload.single('user_image'), function (req, res, next) {
