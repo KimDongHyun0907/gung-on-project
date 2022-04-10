@@ -3,7 +3,7 @@
 @import "index/section2.css";
 @import "index/section3.css";
 @import "index/section4.css";
-@import "index/footer.css";
+@import "footer.css";
 body {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0;
