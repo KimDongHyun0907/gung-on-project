@@ -1,0 +1,66 @@
+.thrid-section__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+}
+.thrid-section__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+}
+.thrid-section__subinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+}
+.thrid-section__title {
+  display: flex;
+  align-items: center;
+  font-size: 4em;
+  height: 50%;
+}
+.thrid-section__content {
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+  height: 50%;
+}
+.thrid-section__minititle {
+  display: flex;
+  align-items: center;
+  font-size: 2.2em;
+  height: 35%;
+}
+.thrid-sentence {
+  display: flex;
+  align-items: center;
+  height: 65%;
+  width: 80%;
+  background-color: white;
+}
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-title {
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 30px;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 20%;
+  height: 100%;
+  width: 60%;
+  text-align: center;
+  font-size: 1.2em;
+}

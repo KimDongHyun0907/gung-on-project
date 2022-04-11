@@ -1,0 +1,26 @@
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 15px;
+  width: 100%;
+}
+.main-bar__column {
+  width: 33%;
+}
+.main-bar__column:first-child {
+  margin-left: 15px;
+  font-size: 1.3em;
+}
+.main-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.main-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 13px;
+}
+.main-bar__column a {
+  margin-right: 13px;
+}

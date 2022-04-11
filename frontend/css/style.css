@@ -1,0 +1,24 @@
+@import "header.css";
+@import "index/section1.css";
+@import "index/section2.css";
+@import "index/section3.css";
+@import "index/section4.css";
+@import "footer.css";
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  background: url("https://static.gabia.com/fonts/project/image/noise_bg.png");
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.view {
+  position: relative;
+  margin-top: 20px;
+  height: 500vh;
+}
+section {
+  height: 25%;
+  position: relative;
+}

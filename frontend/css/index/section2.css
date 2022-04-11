@@ -1,0 +1,15 @@
+.second-section__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.second-section__title {
+  text-align: center;
+  font-size: 5em;
+  margin-bottom: 100px;
+}
+.second-section__description {
+  text-align: center;
+  font-size: 1.5em;
+}
