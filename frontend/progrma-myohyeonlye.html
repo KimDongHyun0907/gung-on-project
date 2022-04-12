@@ -5,67 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>궁온 : 궁궐활용 온라인 프로젝트</title>
-    <link rel="stylesheet" href="style_gung_on.css">
+    <link rel="stylesheet" href="css/style_gung_on.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <div class="img2">
-        <div class="container">
-            <h1><span>SEE THE PALACE</span></h1>
-            <span>고궁의 근엄을 바라보는 공간</span>
+    <div class="view" style="height: 330vh;">
+        <div class="main-bar">
+            <div class="main-bar__column">
+                궁궐활용 온라인 프로젝트
+            </div>
+            <div class="main-bar__column">
+                <img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png">
+            </div>
+            <div class="main-bar__column">
+                <a href="/login">로그인</a>
+                <a href="/register">회원가입</a>
+                <a href="/upload">사진 업로드</a>
+            </div>
         </div>
-    </div>
+        <nav class="nav_bar2">
+            <a href="program-saenggwabang.html">ON 생과방</a>
+            <a href="program-byeolbichyahaeng.html">ON 별빛야행</a>
+            <a href="program-dalbichgihaeng.html">ON 달빛기행</a>
+            <a href="progrma-myohyeonlye.html">ON 묘현례</a>
+            <a href="program-jeobgyeonlye.html">ON 접견례</a>
+        </nav>
 
-    <nav class="nav_bar2">
-        <a href="program-saenggwabang.html">ON 생과방</a>
-        <a href="program-byeolbichyahaeng.html">ON 별빛야행 <br>with 시식공감</a>
-        <a href="program-dalbichgihaeng.html">ON 달빛기행</a>
-        <a href="progrma-myohyeonlye.html">ON 묘현례</a>
-        <a href="program-jeobgyeonlye.html">ON 접견례</a>
-        <a href="program-cheobjong.html">ON 첩종</a>
-    </nav>
-    
-    <div class="content">
-        <h1>- 종묘 -</h1>
-        <h2>ON 묘현례</h2>
-        <span style="text-decoration: underline;">ABOUT MOVIE</span>
-        <p>묘현례는 세자빈이 가례를 마친 후,<br>
-            조선왕조의 역대 왕과 왕비의 신주가 모셔진 종묘를 알현하는 의례로 <br>
-            종묘에서 행해지는 국가의례 중 유일하게 왕실 여성이 참여했던 행사입니다.</p>
-        <span class="pic"><img src="images/img4-2.jpg" alt="img4-2"><img src="images/img4-3.jpg" alt="img4-3"></span>
-        <p>이번 ‘2020묘현례’는 특별히 사전에 시민배우 모집을 통해 선발된 왕세자와 세자빈이 주인공으로 참여하였습니다.<br>
-            일상을 담은 V-log부터, 탄탄한 스토리의 드라마,<br>
-            묘현례의 복식을 소개하는 정보 콘텐츠, 그리고 생생한 메이킹 영상까지! <br>
-            다채롭게 준비된 ‘2020 묘현례’가 지금 여러분을 찾아갑니다!</p>
+        <div class="content">
+            <h1>-종묘 묘현례-</h1>
+            <div style="border:1px solid black; margin: 0px 200px;">
+                <p>
+                    ‘묘현례’는 왕실 혼례를 마친 후 조선왕조 역대 왕과 왕비의 신주가 모셔진 종묘를 알현(謁見,지체가 높은 귀한 사람을 찾아가 뵘)하는 의례로, <br>
+                    시민배우들이 직접 왕과 왕비, 세자와 세자빈, 상궁 등의 다양한 역할로 직접 참여하여 묘현례를 체험해보는 시민 참여 프로그램입니다.<br><br>
+
+                    조선시대 종묘에서 행해지는 국가 의례 중 왕실 여성이 참여 하는 유일한 행사였던 묘현례, 그 뜻깊은 왕실 행사에 여러분들을 초대합니다.
+                </p>
+            </div>
+
+            <h2 >프로그램 소개</h2>
+            <h3>묘현례 순서</h3>
+
+            <table class="table1">
+                <tr>
+                    <td style="padding-right:100px ;"><img src="img/images/img4-1.jpg" alt="img4-1" ></td>
+                    <td style="padding-left: 100px;"><img src="img/images/img4-2.jpg" alt="img4-2" ></td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 100px;">
+                        <h3>1. 국왕, 왕세자 봉심 준비</h3>
+                        <p>국왕과 왕세자, 문무백관이 국궁사배로 선대왕께 인사를 올림<br>
+                            지극한 존경심으로 영령 앞에 몸을 굽히는 것을 국궁이라 하며, <br>
+                            네 번 절하는 것을 사배라고 한다. <br>
+                            절은 한 번 하고 일어나는 것이 아니라 엎드려 한 번 절하고 <br>
+                            앉은 채로 다시 머리를 조아리며 절하는 방식으로 네 번을 한다.
+                        </p>
+                    </td>
+                    <td style="padding-left: 100px;">
+                        <h3>2. 국왕, 왕세자 신실 봉심</h3>
+                        <p>
+                            국왕과 왕세자가 선대왕들의 신주가 모셔진 신실을 살핌<br>
+
+                            봉심이란 왕명을 받는 사람 혹은 <br> 국왕께서 직접 종묘를 찾아뵙고 신실을 점검하는 의례인데, <br>
+                            봉심만을 위해 종묘를 찾는 경우 외에도 <br>묘현례와 같은 특별행사에서도 신실 봉심이 행해졌다.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:100px ;"><img src="img/images/img4-3.jpg" alt="img4-3"></td>
+                    <td style="padding-left: 100px;"><img src="img/images/img4-4.jpg" alt="img4-4"></td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 100px;">
+                        <h3>3. 국왕, 왕세자 소차 이동</h3>
+                        <p>문무백관 퇴장 후 국왕과 왕세자 소차로 들어감<br>
+
+                            당시 신하는 왕비와 세자빈의 얼굴을 볼 수 없었기 때문에 <br>
+                            문무백관들은 왕비와 세자빈이 입장하기 전 모두 퇴장하였다.
+                        </p>
+                    </td>
+                    <td style="padding-left: 100px;">
+                        <h3>4. 왕비, 세자빈 알묘</h3>
+                        <p>
+                            왕비와 세자빈 선대왕들께 공식적으로 인사를 올림<br>
+
+                            왕비와 세자빈은 신실 봉심 없이 국궁사배만 진행하게 된다. <br>
+                            묘현례 절차 중 작은 부분을 차지하고 있으나 <br>
+                            조선시대 종묘에서 행해지는 국가의례 중 <br> 
+                            왕실 여성이 참여하는 유일한 행사로 매우 깊은 의미를 지니고 있다.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right:100px ;"><img src="img/images/img4-5.jpg" alt="img4-5"></td>
+                    <td style="padding-left: 100px;"><img src="img/images/img4-6.jpg" alt="img4-6"></td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 100px;">
+                        <h3>5. 왕비, 세자빈 퇴장</h3>
+                        <p>인사를 마친 왕비와 세자빈은 동문 밖으로 퇴장<br>
+
+                            국궁사배를 마친 왕비와 세자빈은 동문으로 퇴장하는데, <br>
+                            이때 제례에 참여한 모든 여관(女官) 또한 정전을 비운다.
+                        </p>
+                    </td>
+                    <td style="padding-left: 100px;">
+                        <h3>6. 등장인물과 사진 촬영</h3>
+                        <p>
+                            국가의례의 복식을 차려입은 시민배우 참가자와의 사진 촬영
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
         
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hBp41q5COfI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/uSOQJDqS05w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/iAJY9xOs40M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <hr>
-
-    <div class="content">
-        <h2>FEEL THE PALACE</h2>
-        <p>고궁의 감성을 체험하는 공간</p>
-        <ul style>
-            <li>
-                <a href="#"><img src="images/bottom2-1.jpg" alt="bottom2-1" style="width: 65vh;"></a>
-                <em style="display: block;">경복궁 #ON 생과방</em>
-            </li>
-            <li>
-                <a href="#"><img src="images/bottom2-2.jpg" alt="bottom2-2" style="width: 65vh"></a>
-                <em style="display: block;">경복궁 #ON 별빛야행 with 시식공감</em>
-            </li>
-            <li>
-                <a href="#"><img src="images/bottom2-3.jpg" alt="bottom2-3" style="width: 65vh"></a>
-                <em style="display: block;">창덕궁 #ON 달빛기행</em>
-            </li>
-        </ul>
-        <hr>
-        <a href="https://www.chf.or.kr/chf"><img src="images/footer_icon.jpg" alt="footer_icon"></a>
-        <hr>
-        <p>
-            한국문화재재단  Ι  서울특별시 강남구 봉은사로 406 (삼성동 112-2)   문의 02.3210.4806 <br>
-            ⓒ 2020 Korea Cultural Heritage Foundation, All Rights Reserved
-        </p>
+        <footer class="footer-section" style="margin-top: 100px; height: 6%;">
+            <div class="footer-section__wrap">
+                <div class="footer-top">
+                    <img src="https://computer.hufs.ac.kr/sites/ces/images/common/logo_default_on.png?v2">
+                    <div class="footer-top__title">SW 중심대학 사업단</div>
+                </div>
+                <div class="footer-buttom">
+                    <div>캡스톤 프로젝트</div>
+                    <div>3팀</div>
+                    <div>Name: 박태규 양재현 김영훈 김동현</div>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/imgslide.js"></script>
+    <script src="js/text.js"></script>
 </body>
 </html>
