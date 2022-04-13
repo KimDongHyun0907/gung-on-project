@@ -71,10 +71,14 @@
 
 .content img {
     border: double 10px #724d15;
+    width: 400px;
+    height: 300px;
 }
 
 .content table tr td img{
     border: none;
+    width: 200px;
+    height: 150px;
 }
 
 .span_pic {
@@ -92,4 +96,6 @@ table{
 
 .content .table1 tr td img{
     border: double 5px #724d15;
+    width: 400px;
+    height: 300px;
 }
