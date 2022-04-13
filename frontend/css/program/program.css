@@ -1,0 +1,123 @@
+.nav{
+    margin-top: 7%;
+    margin: 6% 5%;
+    padding: 3%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.nav--title{
+    font-size: 4em;
+    position: absolute;
+    left: 10%;
+    
+}
+.nav_bar2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
+    margin-top: 7%;
+    width: 60vw;
+}
+.nav_bar2 a{
+    font-size: 1.3em;
+    text-decoration: none;
+    position: relative;
+    padding: 2% 4%;
+    font-weight: 700;
+}
+
+.nav_bar2 a::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0;
+    height: 4px;
+    background: black;
+    transition: all .5s ease-out;
+}
+
+.nav_bar2 a:hover::after{
+    width:100%;
+}
+.content{
+    margin: 6% 5%;
+}
+.content-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 80vw;
+    padding-bottom: 5%;
+    border-bottom: 1px solid black;
+}
+.content-main p{
+    margin-top: 4%;
+    font-size: 1.2em;
+}
+.content-program{
+    margin-top: 4%;
+    display: flex;
+    width: 100%;
+}
+.content-program__title{
+    font-size: 2em;
+    width: 15vw;;
+}
+.content-program__main{
+    display: flex;
+    flex-direction: column;
+    
+}
+.content__box--item{
+    margin-top: 3%;
+}
+.content__box--item p{
+    margin-top: 3%;
+}
+.content__box--item img{
+    margin-top: 3%;
+}
+.content__box--item div{
+    font-size: 1.5em;
+    margin-top: 4%;
+}
+
+.item-title{
+    font-size: 1.5em;
+}
+.span_pic{
+    display: flex;
+}
+.span_pic img{
+    width: 25vw;
+    height: 30vh;
+    margin-right: 20px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4%;
+}
+.box__contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 25vw;
+    text-align: center;
+}
+.box__contents div{
+    font-size: 1.8em;
+    text-align: center;
+}
+.box__contents p{
+}
+.box img{
+    width: 25vw;
+    height: 30vh;
+}

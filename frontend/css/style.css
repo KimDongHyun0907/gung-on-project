@@ -4,9 +4,12 @@
 @import "index/section3.css";
 @import "index/section4.css";
 @import "footer.css";
+@import "notice/notice.css";
+@import "program/program.css";
+@import "program/dalvich.css";
 body {
   font-family: "Noto Sans KR", sans-serif;
-  margin: 0;
+  margin: 0px;
   background: url("https://static.gabia.com/fonts/project/image/noise_bg.png");
 }
 a {
@@ -15,7 +18,6 @@ a {
 }
 .view {
   position: relative;
-  margin-top: 20px;
   height: 500vh;
 }
 section {
