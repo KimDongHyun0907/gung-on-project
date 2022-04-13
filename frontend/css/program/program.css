@@ -38,7 +38,6 @@
     background: black;
     transition: all .5s ease-out;
 }
-
 .nav_bar2 a:hover::after{
     width:100%;
 }
@@ -66,7 +65,7 @@
 }
 .content-program__title{
     font-size: 2em;
-    width: 15vw;;
+    width: 15vw;
 }
 .content-program__main{
     display: flex;
@@ -86,10 +85,6 @@
     font-size: 1.5em;
     margin-top: 4%;
 }
-
-.item-title{
-    font-size: 1.5em;
-}
 .span_pic{
     display: flex;
 }
@@ -98,7 +93,6 @@
     height: 30vh;
     margin-right: 20px;
 }
-
 .box{
     display: flex;
     justify-content: space-evenly;
@@ -114,8 +108,6 @@
 .box__contents div{
     font-size: 1.8em;
     text-align: center;
-}
-.box__contents p{
 }
 .box img{
     width: 25vw;
