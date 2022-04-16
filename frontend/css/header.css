@@ -7,10 +7,17 @@
 }
 .main-bar__column {
   width: 33%;
+  position: relative;
+  top:15px;
 }
 .main-bar__column:first-child {
-  margin-left: 15px;
+  margin-left: 20px;
   font-size: 1.3em;
+}
+.main-bar__column:first-child a{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20%;
 }
 .main-bar__column:nth-child(2) {
   display: flex;
@@ -21,6 +28,16 @@
   justify-content: flex-end;
   margin-right: 13px;
 }
-.main-bar__column a {
-  margin-right: 13px;
+.main-bar__column:last-child  a {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 20%;
+}
+
+.main-bar__column:first-child a:hover,
+.main-bar__column:last-child  a:first-child:hover,
+.main-bar__column:last-child  a:nth-child(2):hover,
+.main-bar__column:last-child  a:last-child:hover{
+  background-color: white;
 }
