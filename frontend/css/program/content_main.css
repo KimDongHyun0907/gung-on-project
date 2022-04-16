@@ -1,0 +1,19 @@
+.content-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+    padding-bottom: 5%;
+    border-bottom: 1px solid black;
+}
+
+.content-main div{
+    font-size: 2.5em;
+}
+
+.content-main p{
+    margin-top: 4%;
+    font-size: 1.2em;
+}

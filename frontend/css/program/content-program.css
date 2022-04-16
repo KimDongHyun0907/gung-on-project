@@ -1,0 +1,14 @@
+.content-program{
+    margin-top: 4%;
+    display: flex;
+    width: 100%;
+}
+.content-program__title{
+    font-size: 1.6em;
+    width: 13vw;
+}
+.content-program__main{
+    display: flex;
+    flex-direction: column;
+    
+}
