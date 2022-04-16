@@ -1,0 +1,12 @@
+@import "nav.css";
+@import "content_main.css";
+@import "content-program.css";
+@import "content__box--item.css";
+@import "span_pic.css";
+@import "box.css";
+@import "item__content.css";
+
+
+.content{
+    margin: 6% 5%;
+}
