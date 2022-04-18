@@ -6,7 +6,7 @@
 @import "footer.css";
 @import "notice/notice.css";
 @import "program/program.css";
-@import "program/dalvich.css";
+@import "picture.css";
 body {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0px;
