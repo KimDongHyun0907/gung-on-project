@@ -26,7 +26,7 @@ const upload = multer({
 router.use('/images', express.static('images'));
 
 router.get('/upload', (req, res) => {
-    res.sendFile(path.join(__dirname, 'upload.html'));
+    res.sendFile(path.join(__dirname, '../../frontend/upload.html'));
 });
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {

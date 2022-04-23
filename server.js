@@ -4,11 +4,11 @@ const app = express();
 const port = 5000;
 
 const imageUploadRouter = require("./backend/routes/imageUpload")
-const usersRouter = require("./backend/routes/users")
+//const usersRouter = require("./backend/routes/users")
 
 app.use(express.static(__dirname + '/frontend'));
 app.use(imageUploadRouter);
-app.use(usersRouter);
+//app.use(usersRouter);
 
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/login.html'));
