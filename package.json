@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/ptq124/gung-on-project#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "joi": "^17.6.0",
+    "joi-objectid": "^4.0.2",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.1",
     "multer": "^1.4.4"
   }
 }
