@@ -1,0 +1,17 @@
+.content__box--item{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+.content__box--item p{
+    margin-top: 3%;
+}
+.content__box--item img{
+    margin-top: 3%;
+    width: 25vw;
+    height: 30vh;
+}
+.content__box--item div{
+    font-size: 1.5em;
+    margin-top: 4%;
+    margin-right:3%;
+}

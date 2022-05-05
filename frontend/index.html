@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>궁온</title>
+    <title>궁온:한국외대</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js"></script>
+    <script src="https://kit.fontawesome.com/f14ec0ada8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="view">
         <div class="main-bar">
             <div class="main-bar__column">
-                궁궐활용 온라인 프로젝트
+                <a href="/upload">궁궐과 함께 인생 한 컷</a>
             </div>
             <div class="main-bar__column">
-                <img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png">
+                <a href="/"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
             </div>
             <div class="main-bar__column">
+                <a href="/notice">소통의 창</a>
                 <a href="/login">로그인</a>
                 <a href="/register">회원가입</a>
-                <a href="/upload">사진 업로드</a>
             </div>
         </div>
         <section class="first-section">
             <div class="first-section__wrap">
+                <img src="">
                 <div class="first-section__title">
                     <div class="page">한국외대 궁온 프로젝트</div>
                 </div>
+                <!--
                 <ul class="first-section__menu">
-                    <li>궁온소개</li>
-                    <li>프로그램</li>
-                    <li>소통의창</li>
                 </ul>
+                -->
                 <p>
                     한국외대 궁온 프로젝트 모두의연구소의 멘토링을 통하여 만든 딥러닝 프로젝트입니다.<br><br>
                     더 많은 분들이 온라인 공간에서 추억을 <br><br>  
@@ -44,7 +46,7 @@
                 </p>
             </div>
         </section>
-        <section class="thridd-section">
+        <section class="second-section">
             <div class="second-section__wrap">
                 <div class="second-section__title" data-aos="fade-up" data-aos-duration="1000" >
                     <span>궁온 프로그램 소개</span>
@@ -74,7 +76,11 @@
                     <p class="thrid-section__content"  data-aos="fade-up" data-aos-duration="1000">
                         궁궐과 본인의 얼굴을 합성하여 온라인 궁궐에서의 추억을 간직하기 위해 <br>
                         기념사진을 만들어 볼 수 있는 서비스 입니다.
-                    </p>
+                    </p> 
+                    <span class="thrid-section--btn" data-aos="fade-up" data-aos-offset="10">
+                        <a href="/frontend/pages/picture-home.html">체험하기</a>
+                    </span>
+                    
                 </div>
                 <div class="thrid-section__subinfo"  data-aos="fade-up" data-aos-duration="1000">
                     <div class="thrid-section__minititle">
@@ -100,7 +106,8 @@
         <section class="forth-section">
             <div class="forth-section__wrap">
                 <div class="forth-section__title" data-aos="fade-up" data-aos-duration="1000">
-                    프로그램 행사
+                    <div class="forth-section--title">프로그램 행사</div>
+                    <span class="forth-section--more"><a href="#">더보기</a></span>
                 </div>
                 <p data-aos="fade-up" data-aos-duration="1000">궁궐과 함께 인생 한컷 서비스 외 궁온은 다양한 프로그램을 제공합니다.</p>
                 <div class="forth-section__program" data-aos="fade-up" data-aos-duration="1000">
@@ -109,16 +116,17 @@
                         <div class="forth-section__content">
                             <p class="forth-section__slides--tilte"></p>
                             <p class="forth-section__slides--sentence"></p>
+                            <span class="forth-section__slides--btn">체험하기</span>
                         </div>
                     </div>
                     <div class="controls">
-                        <button class="prev">이전</button>
-                        <button class="next">다음</button>
+                        <button class="prev"><i class="fa-solid  fa-chevron-left fa-2xl"></i></button>
+                        <button class="next"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
                     </div>
                 </div>
             </div>
         </section>
-        <footer class="footer-section" data-aos="zoom-in-up" data-aos-duration="1000">
+        <footer class="footer-section">
             <div class="footer-section__wrap">
                 <div class="footer-top">
                     <img src="https://computer.hufs.ac.kr/sites/ces/images/common/logo_default_on.png?v2">
@@ -127,7 +135,7 @@
                 <div class="footer-buttom">
                     <div>캡스톤 프로젝트</div>
                     <div>3팀</div>
-                    <div>Name: 박태규 양재현 김영훈 김동훈</div>
+                    <div>제작 : 박태규 양재현 김영훈 김동훈</div>
                 </div>
             </div>
         </footer>

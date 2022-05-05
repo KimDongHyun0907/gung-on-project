@@ -1,0 +1,32 @@
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+.box__contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50vw;
+    text-align: center;
+}
+
+.box__contents div{
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.box__contents2{
+    display: flex;
+    width: 70vw;
+}
+
+.box__contents2 div {
+    margin-left: 3%;
+}
+
+.box img{
+    width: 25vw;
+    height: 30vh;
+}

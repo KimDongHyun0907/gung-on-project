@@ -1,0 +1,44 @@
+.nav{
+    margin-top: 7%;
+    margin: 6% 5%;
+    padding: 3%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.nav--title{
+    font-size: 4em;
+    position: absolute;
+    left: 10%;
+    
+}
+.nav_bar2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
+    margin-top: 7%;
+    width: 60vw;
+}
+.nav_bar2 a{
+    font-size: 1.3em;
+    text-decoration: none;
+    position: relative;
+    padding: 2% 4%;
+    font-weight: 700;
+}
+
+.nav_bar2 a::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 0;
+    height: 4px;
+    background: black;
+    transition: all .5s ease-out;
+}
+
+.nav_bar2 a:hover::after{
+    width:100%;
+}
