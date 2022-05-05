@@ -5,6 +5,7 @@ const img = imgTag.getElementsByTagName("img");
 const next = document.querySelector(".nextpage");
 next.addEventListener("click",choseImg);
 
+
 function choseImg(event){
 
     for(let i=0; i<radio.length;i++){
@@ -13,7 +14,6 @@ function choseImg(event){
             imgBack.appendChild(img[i]);
         }
     }
-    
     document.querySelector(".file-home").classList.add("hidden");
     document.querySelector(".form").classList.remove("hidden");
 }

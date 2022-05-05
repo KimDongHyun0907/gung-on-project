@@ -30,13 +30,15 @@
                 <img  src="https://emt27.cafe24.com/wp-content/uploads/2020/11/notice_header.jpg">
                 <p class="img-title">궁궐과 함께 인생 한 컷</p>
             </div>
+
             <div class="file-home">
                 <div class="file-home1">
                     <div class="file-title">궁궐사진 선택</div>
                     <div class="file-select">
                         <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_001.jpg" filename="1">
-                            <input type="radio" name="input1">
+                            <a href="#" download="1.jpg">
+                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_001.jpg" for="1">
+                           </a>
                         </div>
                         <div class="file-box">
                             <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_002.jpg">
@@ -67,11 +69,13 @@
                 </div>
                 <button class="nextpage"> 다음 </button>
             </div>
+
             <form class="form hidden" action="http://211.215.36.146:8080/mask/downloader" method = "POST" enctype = "multipart/form-data">
                 <div class="upload" >
                     <div class="file-box">
                         <h2 class="title">배경 이미지</h2>
                         <div class="file-background">
+                            <input type="file" name="back">
                         </div>
                     </div>
                     <div class="file-box">
