@@ -6,7 +6,8 @@
 @import "footer.css";
 @import "notice/notice.css";
 @import "program/program.css";
-@import "picture.css";
+@import "imgupload/picture.css";
+@import "imgupload/picturehome.css";
 body {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0px;
@@ -23,4 +24,10 @@ a {
 section {
   height: 25%;
   position: relative;
+}
+.container{
+  height: 150vh;
+}
+.hidden{
+  display: none;
 }
