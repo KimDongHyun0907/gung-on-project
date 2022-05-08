@@ -102,13 +102,12 @@ day.addEventListener("focusout", isBirthCompleted);
 function isBirthCompleted() {
     var yearPattern = /[0-9]{4}/;
     var dayPattern=/[0-9]{1,2}/;
+    var month_30=[4,6,9,11];
 
     if(!yearPattern.test(year.value)) {
         error[4].innerHTML = "태어난 년도 4자리를 정확하게 입력하세요.";
         error[4].style.display = "block";
-    } /*else {
-        //isMonthSelected();
-    }*/
+    } 
     else if(month.value=="월"){
         error[4].innerHTML = "태어난 월을 선택하세요.";
         error[4].style.display = "block";
@@ -125,6 +124,39 @@ function isBirthCompleted() {
 
     else{
         error[4].style.display="none";
+    }
+
+    for (var i=0;i<month_30.length;i++){
+        if(month_30[i]==month.value){
+            if(day.value>=31){
+                error[4].innerHTML="생년월일을 다시 확인해주세요.";
+                error[4].style.display = "block";
+            }
+        }
+    }
+    if(month.value==2){
+        if((year.value%4==0 && year.value%100!=0) || year.value%400==0){
+            if(day.value<=29){
+                error[4].style.display = "none";
+            }
+            else{
+                error[4].innerHTML="생년월일을 다시 확인해주세요.";
+                error[4].style.display="block";
+            }
+        }
+        else{
+            if(day.value<=28){
+                error[4].style.display = "none";
+            }
+            else{
+                error[4].innerHTML="생년월일을 다시 확인해주세요.";
+                error[4].style.display="block";
+            }
+        }
+        if(day.value>=30){
+            error[4].innerHTML="생년월일을 다시 확인해주세요.";
+            error[4].style.display = "block";
+        }
     }
 }
 
@@ -169,5 +201,32 @@ function checkPhoneNum() {
         error[7].style.display = "block";
     } else {
         error[7].style.display = "none";
+    }
+}
+
+function regSubmit(){
+    var id=document.getElementById('id').value;
+    var pw=document.getElementById('pw').value;
+    var pw2=document.getElementById('pw2').value;
+    var name=document.getElementById('name').value;
+    var year=document.getElementById('year').value;
+    var day=document.getElementById('day').value;
+    var email=document.getElementById('email').value;
+    var phone=document.getElementById('phone').value;
+
+    if(id=="" || pw=="" || pw2=="" || name=="" || year=="" || day=="" || email=="" || phone==""){
+        alert("정보를 다시 확인해주세요.");
+        return false;
+    }
+    else{
+        alert("가입이 완료되었습니다.");
+    }
+
+    var i;
+    for(i=0;i<8;i++){
+        if(error[i].style.color=="red"){
+            alert("정보를 다시 확인해주세요.");
+            return false;
+        }
     }
 }
