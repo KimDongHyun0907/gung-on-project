@@ -66,14 +66,37 @@
     width: 30vw;
     height: 40vh;
 }
+.submit{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
 .submit input{
     border: none;
     background-color: #5b975b;
-    width: 8vw;
-    color: white;
-    padding: 14px 20px;
+    width: 10vw;
+    color: #fff;
+    padding: 10px 0;
     border-radius: 6px;
     margin-top: 5%;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.prviouspage{
+    background-color: #5b975b;
+    width: 10vw;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 5%;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-right: 1%;
+    margin-left: 10%;
+}
+.prviouspage a{
+    color: #fff;
 }
 @media (max-width: 700px) {
     .file-contents {
