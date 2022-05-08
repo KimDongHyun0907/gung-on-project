@@ -1,0 +1,17 @@
+.show-title{
+    margin-top: 15%;
+    font-size: 2em;
+    margin-bottom: 30%;
+}
+.show-img{
+    width: 33vw;
+    height: 50vh;
+}
+.show-down{
+    margin-top: 15%;
+    background-color: #5b975b;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 6px;
+    border: none;
+}

@@ -7,11 +7,20 @@
   flex-direction: column;
   position: absolute;
   top: 20%;
-  height: 70%;
+  height: 80%;
+  background: url("http://royal.cha.go.kr/RPTC/images/content/gnContent/gung_gbg/img_gbg_slide2.jpg");
+  background-size:100%;
+  opacity: 0.95;
+  width: 90%;
+  text-align: center;
 }
 .first-section__title {
-  font-size: 8em;
+  font-size: 7em;
   margin-bottom: 70px;
+  color: white;
+  padding: 40px;
+  position: relative;
+  top: 8%;
 }
 .first-section__menu {
   display: flex;
@@ -26,6 +35,7 @@
   position: relative;
   text-align: center;
   top: 20%;
-  font-size: 1.4em;
-  text-decoration: underline;
+  font-size: 1.6em;
+  color: white;
+  font-weight: 800;
 }
