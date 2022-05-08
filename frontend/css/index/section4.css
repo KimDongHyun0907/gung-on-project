@@ -32,11 +32,11 @@
 .program-page {
   display: flex;
   justify-content: space-evenly;
-  height: 100%;
+  height:60vh;
 }
 .forth-section__content {
   width: 45vw;
-  height: 100%;
+  height: 30vh;
 }
 .forth-section__slides--sentence {
   height: 100%;

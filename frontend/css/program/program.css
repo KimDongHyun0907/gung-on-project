@@ -1,10 +1,10 @@
-@import "nav.css";
-@import "content_main.css";
-@import "content-program.css";
-@import "content__box--item.css";
-@import "span_pic.css";
-@import "box.css";
-@import "item__content.css";
+@import "/frontend/css/program/nav.css";
+@import "/frontend/css/program/content_main.css";
+@import "/frontend/css/program/content-program.css";
+@import "/frontend/css/program/content__box--item.css";
+@import "/frontend/css/program/span_pic.css";
+@import "/frontend/css/program/box.css";
+@import "/frontend/css/program/item__content.css";
 
 
 .content{
