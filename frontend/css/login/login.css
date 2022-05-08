@@ -1,0 +1,42 @@
+input:focus{
+    outline:none;
+}
+
+.content-program__main.login h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top:5%;
+    margin-bottom: 5%;
+}
+
+.box.input{
+    display: block;
+    width: 180%;
+    border: 1px solid #dadada;
+    margin-left: 0%;
+    padding: 3% 5% 3% 5%;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+}
+
+.login_button{
+    margin: 15% 0 30%;
+}
+
+#button_login{
+    width: 180%;
+    padding: 5% 0 5%;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #c7a26a;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.content-program__main.login{
+    margin-left: 38%; 
+    margin-right:38%;
+    margin-top: 6%;
+}

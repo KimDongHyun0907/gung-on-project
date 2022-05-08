@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>궁온 : 궁궐활용 온라인 프로젝트</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <script src="../js/register.js"></script>
+</head>
+<body>
+    <div class="main-bar">
+        <div class="main-bar__column">
+            <a href="/upload">궁궐과 함께 인생 한 컷</a>
+        </div>
+        <div class="main-bar__column">
+            <img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png">
+        </div>
+        <div class="main-bar__column">
+            <a href="/login">로그인</a>
+            <a href="/register">회원가입</a>
+            <a href="/upload">사진 업로드</a>
+        </div>
+    </div>
+    <div class="content">    
+        
+        <div class="content-program">
+            <div class="content-program__title">회원가입</div>
+            <div class="content-program__main register">
+                <form action="">
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="id">아이디</label>
+                        </h3>
+                        <span class="box int_id">
+                            <input type="text" id="id" class="int" maxlength="20">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="pw">비밀번호</label>
+                        </h3>
+                        <span class="box int_pw">
+                            <input type="password" id="pw" class="int" maxlength="20">
+                            <span id="alerttxt">사용불가</span>
+                            <img src="../img/m_icon_pass.png" id="pw_img1">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="pw2">비밀번호 확인</label>
+                        </h3>
+                        <span class="box int_pw_check">
+                            <input type="password" id="pw2" class="int" maxlength="20">
+                            <img src="../img/m_icon_check_disable.png" id="pw_img2">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="name">이름</label>
+                        </h3>
+                        <span class="box int_name">
+                            <input type="text" id="name" class="int" maxlength="20">   
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="year">생년월일</label>
+                        </h3>
+                        <div id="bir_wrap">
+                            <div id="bir_year">
+                                <span class="box bir">
+                                    <input type="text" id="year" class="int" maxlength="4" placeholder="년(4자)">
+                                </span>
+                            </div>
+
+                            <div id="bir_month">
+                                <span class="box bir">
+                                    <select id="month" class="sel">
+                                        <option>월</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </span>
+                            </div>
+
+                            <div id="bir_day">
+                                <span class="box bir">
+                                    <input type="text" id="day" class="int" maxlength="2" placeholder="일">
+                                </span>
+                            </div>
+                        </div>
+                        <span class="error_next_box"></span>
+                    </div>
+
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="gender">성별</label>
+                        </h3>
+                        <span class="box int_gender">
+                            <select id="gender" class="sel">
+                                <option>성별</option>
+                                <option value="man">남자</option>
+                                <option value="woman">여자</option>
+                            </select>                        
+                        </span>
+                        <span class="error_next_box">필수 정보입니다.</span>
+                    </div>
+                    
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="email">이메일</label>
+                        </h3>
+                        <span class="box int_email">
+                            <input type="text" id="email" class="int">
+                        </span>
+                        <span class="error_next_box">이메일 주소를 다시 확인해주세요</span>
+                    </div>
+
+                    <div>
+                        <h3 class="reg_title">
+                            <label for="phone">휴대전화 (ex) 01012345678 ('-'제외))</label>
+                        </h3>
+                        <span class="box int_phone">
+                            <input type="tel" id="phone" class="int" placeholder="번호 입력">
+                        </span>
+                        <span class="error_next_box"></span>
+                    </div>
+
+                    <div class="reg_button">
+                        <input id="button_reg" type="submit" value="가입하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer-section">
+        <div class="footer-section__wrap">
+            <div class="footer-top">
+                <img src="https://computer.hufs.ac.kr/sites/ces/images/common/logo_default_on.png?v2">
+                <div class="footer-top__title">SW 중심대학 사업단</div>
+            </div>
+            <div class="footer-buttom">
+                <div>캡스톤 프로젝트</div>
+                <div>3팀</div>
+                <div>Name: 박태규 양재현 김영훈 김동현</div>
+            </div>
+        </div>
+    </footer>
+<script src="../js/register.js"></script>
+</body>
+</html>

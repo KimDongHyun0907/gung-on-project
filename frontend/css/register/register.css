@@ -1,0 +1,20 @@
+@import "box.css";
+@import "input.css";
+@import "bir.css";
+@import "select.css";
+@import "alert_error.css";
+@import "reg_button.css";
+
+input:focus{
+    outline:none;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.content-program__main.register{
+    margin-left: 20%; 
+    margin-top: 5%;
+}

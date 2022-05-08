@@ -9,6 +9,9 @@
 @import "imgupload/picture.css";
 @import "imgupload/picturehome.css";
 @import "imgupload/show.css";
+@import "register/register.css";
+@import "login/login.css";
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0px;

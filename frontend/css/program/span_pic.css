@@ -1,0 +1,8 @@
+.span_pic{
+    display: flex;
+}
+.span_pic img{
+    width: 25vw;
+    height: 30vh;
+    margin-right: 1.5%;   
+}
