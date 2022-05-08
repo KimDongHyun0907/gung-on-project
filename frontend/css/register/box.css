@@ -1,0 +1,27 @@
+@import "box_input.css";
+
+.box{
+    display: block;
+    width: 100%;
+    border: 1px solid #dadada;
+    margin-left: 0%;
+    padding: 3% 5% 3% 5%;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+}
+
+.box.bir{
+    height: 6.5vh;
+}
+
+.box img{
+    width: 1.5vw;
+    height: 3vh;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    margin-top: -3%;
+    cursor: pointer;
+}

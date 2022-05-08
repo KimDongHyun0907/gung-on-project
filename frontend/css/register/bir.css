@@ -1,0 +1,24 @@
+#bir_wrap{
+    display: table;
+    width:100%;
+}
+
+#bir_year{
+    display: table-cell;
+    width:10vw;
+}
+
+#bir_month{
+    display: table-cell;
+    width: 10vw;
+    vertical-align: middle;
+}
+
+#bir_day{
+    display: table-cell;
+    width:10vw;
+}
+
+#bir_month, #bir_day{
+    padding-left: 3%;
+}

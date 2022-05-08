@@ -1,0 +1,14 @@
+.reg_button{
+    margin: 15% 0 30%;
+}
+
+#button_reg{
+    width: 100%;
+    padding: 5% 0 5%;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #c7a26a;
+    font-size: 1.5em;
+    font-weight: 400;
+}
