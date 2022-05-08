@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage: storage,
-    limits: {fileSize: 10000000}, //File size limit 10 MB.
+    limits: {fileSize: 4000000}, //File size limit 4 MB.
     fileFilter: function (req, file, cb) { //PNG, JPG, JPEG, GIF, JFIF
         if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/gif" || file.mimetype == "image/jfif") {
             cb(null, true);
@@ -26,7 +26,7 @@ const upload = multer({
 router.use('/images', express.static('images'));
 
 router.get('/upload', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/upload.html'));
+    res.sendFile(path.join(__dirname, '../../frontend/pages/picture-home.html'));
 });
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {

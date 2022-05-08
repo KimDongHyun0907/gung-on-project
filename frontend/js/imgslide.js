@@ -4,7 +4,7 @@ const imges = [
     "https://www.chf.or.kr/jnrepo/namo/img/images/000001/occasion_main_img2.jpg",
     "https://www.chf.or.kr/jnrepo/namo/img/images/000001/jongmyo_occasion_img1.jpg",
     "https://www.chf.or.kr/jnrepo/upload/contentCrawler/202011/formality3.jpg"
-];
+]
 const sentence = [
     {
         title:"생과방",
@@ -33,8 +33,8 @@ const content = document.querySelector(".forth-section__slides--sentence");
 chosenSentence=sentence[0];
 title.innerHTML = chosenSentence.title;
 content.innerText = chosenSentence.content;
-title.style.fontSize=3.5+"em"
-content.style.fontSize=1.5+"em"
+title.style.fontSize=3.5+"em";
+content.style.fontSize=1.5+"em";
 /* img 초기값 지정 */
 const imgLength = imges.length;
 let count = 0;

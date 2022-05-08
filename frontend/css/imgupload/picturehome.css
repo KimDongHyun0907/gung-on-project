@@ -1,15 +1,18 @@
+.container-file{
+    height: 250vh;
+}
 .file-home{
-    height: calc(150vh - 18vh);
+    height: calc(250vh - 18vh);
 }
 .file-title{
-    font-size: 1.3em;
+    font-size: 1.5em;
     margin-top: 2%;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
     margin-left: 2%;
 }
 .file-select img{
     width: 20vw;
-    height: 30vh;
+    height: 25vh;
     margin-bottom: 3%;
 }
 .file-select input{
@@ -19,6 +22,7 @@
 .file-select{
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 7%;
 }
 .file-box{
     width: 25vw;
@@ -34,5 +38,21 @@
     color: white;
     padding: 14px 20px;
     border-radius: 6px;
-    margin-top: 3%;
+    font-size: 1.4em;
+}
+.file-menu{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+}
+.file-mene__item{
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 3%;
+    padding: 1%;
+    font-size: 1.3em;
+}
+.hidden_item{
+    color: #8c8c8c;
 }

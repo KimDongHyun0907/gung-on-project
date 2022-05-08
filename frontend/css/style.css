@@ -10,6 +10,7 @@
 @import "login/login.css";
 @import "imgupload/picture.css";
 @import "imgupload/picturehome.css";
+@import "imgupload/show.css";
 body {
   font-family: "Noto Sans KR", sans-serif;
   margin: 0px;
