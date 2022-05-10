@@ -38,6 +38,14 @@ app.use(cookieParser());
 
 app.use('/images', serveIndex(path.join(__dirname, '/images')));
 app.use(express.static(__dirname + '/frontend'));
+app.use(express.static(__dirname + '/frontend/css'));
+app.use(express.static(__dirname + '/frontend/css/imgupload'));
+app.use(express.static(__dirname + '/frontend/css/index'));
+app.use(express.static(__dirname + '/frontend/css/login'));
+app.use(express.static(__dirname + '/frontend/css/notice'));
+app.use(express.static(__dirname + '/frontend/css/program'));
+app.use(express.static(__dirname + '/frontend/css/register'));
+
 
 app.use(imageUploadRouter);
 
@@ -136,11 +144,11 @@ app.post('/create_notice', auth, (req, res) => {
     }
 });
 
-app.get("/upload", auth, (req, res) => {
+app.get('/upload', auth, (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
 });
 
-app.post("/upload" (req, res) => {
+app.post('/upload', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/show.html'));
 });
 
