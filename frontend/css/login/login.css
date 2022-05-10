@@ -30,12 +30,13 @@ input:focus{
     border: 0;
     cursor: pointer;
     color: #fff;
-    background-color: #c7a26a;
+    background-color: #5b975b;
     font-size: 1.5em;
     font-weight: 400;
 }
 
 .content-program__main.login{
     margin-left: 38%; 
-    margin-top: 8%;
+    margin-right:38%;
+    margin-top: 6%;
 }

@@ -100,22 +100,22 @@
 }
 @media (max-width: 700px) {
     .file-contents {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
     }
     .file-contents .upload-box {
-        width: 100%;
-        box-sizing: border-box;
-        margin-right: 0;
+      width: 100%;
+      box-sizing: border-box;
+      margin-right: 0;
     }
     .file-contents .upload-box .drag-file {
-        height: 150px;
+      height: 150px;
     }
     .file-contents .files {
-        width: 100%;
-        box-sizing: border-box;
-        margin-right: 0;
-        overflow: initial;
+      width: 100%;
+      box-sizing: border-box;
+      margin-right: 0;
+      overflow: initial;
     }
 }

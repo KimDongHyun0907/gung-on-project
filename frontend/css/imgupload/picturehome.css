@@ -1,3 +1,24 @@
+.main-content--file{
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 100%;
+}
+.nav-bar--file{
+    position: relative;
+}
+.nav-bar--file img{
+    width: 100%;
+    vertical-align: bottom;
+}
+.file-img-title{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    color: white;
+    font-size: 2.7em;
+}  
 .container-file{
     height: 250vh;
 }

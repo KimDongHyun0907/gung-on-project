@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage: storage,
-    limits: {fileSize: 4000000}, //File size limit 4 MB.
+    limits: {fileSize: 10000000}, //File size limit 4 MB.
     fileFilter: function (req, file, cb) { //PNG, JPG, JPEG, GIF, JFIF
         if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/gif" || file.mimetype == "image/jfif") {
             cb(null, true);
@@ -32,11 +32,10 @@ router.get('/upload', (req, res) => {
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
     // req.file is the `profile-file` file
     // req.body will hold the text fields, if there were any
-    console.log(JSON.stringify(req.file))
     var response = '<a href="/">Home</a><br>'
     response += "File uploaded successfully.<br>"
     response += `<img src="${req.file.path}" /><br>`
-    return res.send(response)
+    return res.redirect(req.file.url)
 });
 
 module.exports = router;
