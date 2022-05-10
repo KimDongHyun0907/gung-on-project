@@ -1,0 +1,12 @@
+select {
+    width: 100%;
+    height: 3vh;
+    font-size: 1em;
+    background: #fff url(https://static.nid.naver.com/images/join/pc/sel_arr_2x.gif) 100% 50% no-repeat;
+    background-size: 1vw 1vh;
+    -webkit-appearance: none;
+    display: inline-block;
+    text-align: start;
+    border: none;
+    cursor: default;
+}
