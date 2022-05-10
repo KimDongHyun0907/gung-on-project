@@ -34,7 +34,6 @@
   border: 1px solid black;
   border-radius: 20%;
 }
-
 .main-bar__column:first-child a:hover,
 .main-bar__column:last-child  a:first-child:hover,
 .main-bar__column:last-child  a:nth-child(2):hover,

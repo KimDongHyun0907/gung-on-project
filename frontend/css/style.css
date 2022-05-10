@@ -7,25 +7,11 @@
 @import "notice/gallery1.css";
 @import "notice/gallery.css";
 @import "program/program.css";
-@import "program/box.css";
-@import "program/content-program.css";
-@import "program/content__box--item.css";
-@import "program/content_main.css";
-@import "program/item__content.css";
-@import "program/nav.css";
-@import "program/span_pic.css";
-@import "register/register.css";
-@import "register/alert_error.css";
-@import "register/bir.css";
-@import "register/box.css";
-@import "register/box_input.css";
-@import "register/input.css";
-@import "register/reg_button.css";
-@import "register/select.css";
-@import "login/login.css";
 @import "imgupload/picture.css";
 @import "imgupload/picturehome.css";
 @import "imgupload/show.css";
+@import "register/register.css";
+@import "login/login.css";
 
 body {
   font-family: "Noto Sans KR", sans-serif;
