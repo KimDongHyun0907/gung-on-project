@@ -2,23 +2,8 @@ const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
         title: String,
-        /*filename: {
-                type: String,
-                unique: true,
-                required: true
-        },
-        contentType: {
-                type: String,
-                required: true
-        },
-        imageBase64: {
-                type: String,
-                required: true
-        },*/
-        poster: {
-                type: String,
-                required: true
-        },
+        content: String,
+        poster: String,
         dateCreated: {type: Date, default: Date.now}
 });
 

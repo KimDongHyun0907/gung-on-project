@@ -10,10 +10,9 @@ const cookieParser = require('cookie-parser');
 const http = require('http');
 
 const auth = require('./backend/middlewares/auth');
-//const imageUploadRouter = require("./backend/routes/imageUpload");
+const imageUploadRouter = require("./backend/routes/imageUpload");
 const User = require('./backend/models/user');
 const Post = require('./backend/models/post');
-const imageIndexRoutes = require('./backend/routes/imageIndex');
 
 require('dotenv').config();
 const jwt_secret = process.env.JWT_SECRET_STRING
@@ -37,11 +36,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(cookieParser());
 
-//app.use('/images', serveIndex(path.join(__dirname, '/images')));
+app.use('/images', serveIndex(path.join(__dirname, '/images')));
 app.use(express.static(__dirname + '/frontend'));
 
-//app.use(imageUploadRouter);
-app.use(imageIndexRoutes);
+app.use(imageUploadRouter);
 
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/register/register.html'));
@@ -117,11 +115,11 @@ app.get('/notice', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/notice/notice.html'));
 });
 
-app.get('/createpost', auth, (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/gallery/gallery1.html'));
+app.get('/create_notice', auth, (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/registernotice.html'));
 });
 
-app.post('/createpost', auth, (req, res) => {
+app.post('/create_notice', auth, (req, res) => {
     var user_token = req.cookies.access_token
     var token_decoded = jwt_decode(user_token)
     var bodyinput = req.body
@@ -129,6 +127,7 @@ app.post('/createpost', auth, (req, res) => {
     try {
         const post = Post.create({
             title: bodyinput.title,
+            content: bodyinput.content,
             poster: token_decoded.username
         });
         return res.send("Post saved!");
@@ -137,7 +136,11 @@ app.post('/createpost', auth, (req, res) => {
     }
 });
 
-app.get("/logout", auth, (req, res) => {
+app.get("/upload", auth, (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
+});
+
+app.get('/logout', auth, (req, res) => {
     res.clearCookie("access_token");
     return res.redirect("/");
 });

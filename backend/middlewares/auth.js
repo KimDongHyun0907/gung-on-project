@@ -6,7 +6,7 @@ const config = process.env;
 const verifyToken = (req, res, next) => {
     const token = req.cookies.access_token;
     if (!token) {
-        return res.status(403).send("Invalid account token.");
+        return res.redirect('/login');
    }
     try {
         const decoded = jwt.verify(token, config.JWT_SECRET_STRING);

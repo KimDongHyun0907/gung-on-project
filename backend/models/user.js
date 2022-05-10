@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema({
         gender: String,
         phone_number: { type: String, unique: true },
         dateCreated: { type: Date, default: Date.now },
-        token: String,
 });
 
 module.exports = mongoose.model("user", userSchema);
