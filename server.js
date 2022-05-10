@@ -7,11 +7,13 @@ const jwt = require('jsonwebtoken');
 const serveIndex = require('serve-index');
 const cookieParser = require('cookie-parser');
 const http = require('http');
+const jwt_decode = require('jwt-decode');
 
 const auth = require('./backend/middlewares/auth');
-const imageUploadRouter = require("./backend/routes/imageUpload");
+//const imageUploadRouter = require("./backend/routes/imageUpload");
 const User = require('./backend/models/user');
 const Post = require('./backend/models/post');
+const imageIndexRoutes = require('./backend/routes/imageIndex');
 
 require('dotenv').config();
 const jwt_secret = process.env.JWT_SECRET_STRING
@@ -38,22 +40,8 @@ app.use(cookieParser());
 app.use('/images', serveIndex(path.join(__dirname, '/images')));
 app.use(express.static(__dirname + '/frontend'));
 
-app.use(imageUploadRouter);
-
-/*const auth = (req, res, next) => {
-    const token = req.cookies.access_token
-    if (!token) {
-        return res.sendStatus(403);
-    }
-    try {
-        const data = jwt.verify(token, config.JWT_SECRET_STRING);
-        req.userId = data.id;
-        req.userRole = data.role;
-        return next();
-    } catch {
-        return res.sendStatus(403);
-    }
-};*/
+//app.use(imageUploadRouter);
+app.use(imageIndexRoutes);
 
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/register/register.html'));
@@ -112,10 +100,10 @@ app.post('/login', async (req, res) => {
             user.token = token;
             res.cookie('access_token', token, {
                 httpOnly: true
-            }).status(200).json(user)
+            });
             return res.redirect('/');
         }
-        res.status(400).send("Invalid credentials.");
+        res.sendFile(path.join(__dirname, '/frontend/pages/login/login.html'));
     } catch (err) {
         console.log(err);
     }
@@ -124,7 +112,6 @@ app.post('/login', async (req, res) => {
 app.get('/gallery', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/gallery/gallery.html'));
 });
-
 
 app.get('/notice', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/notice/notice.html'));
@@ -135,49 +122,24 @@ app.get('/createpost', auth, (req, res) => {
 });
 
 app.post('/createpost', auth, (req, res) => {
-    const { title, image } = req.body
-    const { poster } = req.user
-    try{
-        var newPost = new Post(req.body);
-        newPost.save(function (err, post) {
-            if (err) console.log(err);
-            return res.send("Post saved!")
-        })
+    var user_token = req.cookies.access_token
+    var token_decoded = jwt_decode(user_token)
+    var bodyinput = req.body
+
+    try {
+        const post = Post.create({
+            title: bodyinput.title,
+            poster: token_decoded.username
+        });
+        return res.send("Post saved!");
     } catch (error) {
         console.log(error);
-    };
-});
-
-app.post("/welcome", auth, (req, res) => {
-    res.status(200).send("Welcome!");
+    }
 });
 
 app.get("/logout", auth, (req, res) => {
-    return res
-        .clearCookie("access_token")
-        .status(200)
-        .json({ message: "Successfully logged out 😏 🍀" });
+    res.clearCookie("access_token");
+    return res.redirect("/");
 });
-/*//Conflicting with auth.js in middlewares
-app.use(function(req, res, next) {
-
-    var token = req.cookies.auth;
-
-    // decode token
-    if (token) {
-
-        jwt.verify(token, 'secret', function(err, token_data) {
-            if (err) {
-                return res.status(403).send('Error');
-            } else {
-                req.user_data = token_data;
-                next();
-            }
-        });
-
-    } else {
-        return res.status(403).send('No token');
-    }
-});*/
 
 app.listen(port,() => console.log(`Server running on port: ${port}`));
