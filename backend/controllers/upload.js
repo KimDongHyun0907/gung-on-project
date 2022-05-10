@@ -1,11 +1,14 @@
 const upload = require("../middlewares/uploadFile");
 const MongoClient = require("mongodb").MongoClient;
 const GridFSBucket = require("mongodb").GridFSBucket;
-const baseUrl = "http://localhost:5000/images";
+const jwt_decode = require('jwt-decode');
+const cookieParser = require('cookie-parser');
 require('dotenv').config();
 const connection_string = process.env.CONNECTION_STRING
 const url = connection_string;
 const mongoClient = new MongoClient(url);
+
+const baseUrl = "http://localhost:5000/images/";
 
 const uploadFiles = async (req, res) => {
     try {
@@ -29,6 +32,8 @@ const uploadFiles = async (req, res) => {
 
 const getListFiles = async (req, res) => {
     try {
+        var user_token = req.cookies.access_token
+        var token_decoded = jwt_decode(user_token)
         await mongoClient.connect();
         const database = mongoClient.db("Gung-on_Account_Database");
         const images = database.collection("images" + ".files");
@@ -41,8 +46,9 @@ const getListFiles = async (req, res) => {
         let fileInfos = [];
         await cursor.forEach((doc) => {
             fileInfos.push({
-                name: doc.filename,
+                //image: doc.filename,
                 url: baseUrl + doc.filename,
+                user: token_decoded.username,
             });
         });
         return res.status(200).send(fileInfos);

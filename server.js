@@ -4,10 +4,10 @@ const path = require('path');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const jwt_decode = require('jwt-decode');
 const serveIndex = require('serve-index');
 const cookieParser = require('cookie-parser');
 const http = require('http');
-const jwt_decode = require('jwt-decode');
 
 const auth = require('./backend/middlewares/auth');
 //const imageUploadRouter = require("./backend/routes/imageUpload");
@@ -37,7 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(cookieParser());
 
-app.use('/images', serveIndex(path.join(__dirname, '/images')));
+//app.use('/images', serveIndex(path.join(__dirname, '/images')));
 app.use(express.static(__dirname + '/frontend'));
 
 //app.use(imageUploadRouter);
