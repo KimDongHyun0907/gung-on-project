@@ -11,159 +11,159 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-file">
-        <div class="main-bar">
-            <div class="main-bar__column">
-                <a href="/frontend/pages/picture-home.html">궁궐과 함께 인생 한 컷</a>
-            </div>
-            <div class="main-bar__column">
-                <a href="/frontend/index.html"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
-            </div>
-            <div class="main-bar__column">
-                <a href="/frontend/pages/gallery/gallery.html">궁온 갤러리</a>
-                <a href="/frontend/pages/login/login.html">로그인</a>
-                <a href="/frontend/pages/register/register.html">회원가입</a>
-            </div>
+<div class="container-file">
+    <div class="main-bar">
+        <div class="main-bar__column">
+            <a href="/upload">궁궐과 함께 인생 한 컷</a>
         </div>
-        <div class="main-content--file">
-            <div class="nav-bar--file">
-                <img  src="https://emt27.cafe24.com/wp-content/uploads/2020/11/program_detail06_header-2.jpg">
-                <p class="file-img-title">궁궐과 함께 인생 한 컷</p>
-            </div>
-            <div class="file-home">
-                <div class="file-home1">
-                    <div class="file-menu">
-                        <div class="file-mene__item">배경사진 선택</div>
-                        <div class="file-mene__item hidden_item">인물사진 업로드</div>
-                    </div>
-                    <div class="file-title">궁궐사진 선택</div>
-                    <div class="file-select">
-                        <div class="file-box">
-                            <img src="/frontend/img/background/1_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="/frontend/img/background/2_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="/frontend/img/background/3_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="/frontend/img/background/4_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                    </div>
-                    <div class="file-select">
-                        <div class="file-box">
-                            <img src="/frontend/img/background/5_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="/frontend/img/background/6_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="/frontend/img/background/7_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="/frontend/img/background/8_gung.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                    </div>
-                </div>
-                <div class="file-home1">
-                    <div class="file-title">관광지 사진 선택</div>
-                    <div class="file-select">
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_001.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_002.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                    </div> 
-                    <div class="file-select">
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_001.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_002.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                        <div class="file-box">
-                            <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
-                            <input type="radio" name="input1">
-                        </div>
-                    </div> 
-                </div>
-                <button class="nextpage"> 다음 </button>
-            </div>
-
-            <form class="form hidden" action="http://211.215.36.146:8080/mask/downloader" method = "POST" enctype = "multipart/form-data">
-                <div class="file-menu">
-                    <div class="file-mene__item hidden_item">배경사진 선택</div>
-                    <div class="file-mene__item ">인물사진 업로드</div>
-                </div>
-                <div class="upload" >
-                    <div class="file-box">
-                        <h2 class="title">배경 이미지</h2>
-                        <div class="file-background">
-                        </div>
-                    </div>
-                    <div class="file-box">
-                        <h2 class="title">인물사진 업로드</h2>
-                        <div class="file-contents">
-                            <div class="upload-box">
-                                <div id="drop-file" class="drag-file">
-                                    <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" >
-                                    <p class="message">이곳에 드래그&드롭해 주세요</p>
-                                    <img src="" alt="미리보기 이미지" class="preview">
-                                </div>
-                                <label class="file-label" for="chooseFile">파일 선택</label>
-                                <!-- 이미지 올리고 서버로 보내는 부분 form 태그 참조-->
-                                <input class="file" name="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif"> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="submit">
-                    <div class="prviouspage"><a href="/frontend/pages/picture-home.html">이전</a></div>
-                    <input type="submit">
-                </div>
-            </form>
+        <div class="main-bar__column">
+            <a href="/"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
         </div>
-        <footer class="footer-section">
-            <div class="footer-section__wrap">
-                <div class="footer-top">
-                    <img src="https://computer.hufs.ac.kr/sites/ces/images/common/logo_default_on.png?v2">
-                    <div class="footer-top__title">SW 중심대학 사업단</div>
-                </div>
-                <div class="footer-buttom">
-                    <div>캡스톤 프로젝트</div>
-                    <div>3팀</div>
-                    <div>Name: 박태규 양재현 김영훈 김동훈</div>
-                </div>
-            </div>
-        </footer>
+        <div class="main-bar__column">
+            <a href="/gallery">궁온 갤러리</a>
+            <a href="/login">로그인</a>
+            <a href="/register">회원가입</a>
+        </div>
     </div>
-    <script src="../js/picture.js"></script>
-    <script src="../js/imgupload.js"></script>
+    <div class="main-content--file">
+        <div class="nav-bar--file">
+            <img  src="https://emt27.cafe24.com/wp-content/uploads/2020/11/program_detail06_header-2.jpg">
+            <p class="file-img-title">궁궐과 함께 인생 한 컷</p>
+        </div>
+        <div class="file-home">
+            <div class="file-home1">
+                <div class="file-menu">
+                    <div class="file-mene__item">배경사진 선택</div>
+                    <div class="file-mene__item hidden_item">인물사진 업로드</div>
+                </div>
+                <div class="file-title">궁궐사진 선택</div>
+                <div class="file-select">
+                    <div class="file-box">
+                        <img src="/frontend/img/background/1_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="/frontend/img/background/2_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="/frontend/img/background/3_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="/frontend/img/background/4_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                </div>
+                <div class="file-select">
+                    <div class="file-box">
+                        <img src="/frontend/img/background/5_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="/frontend/img/background/6_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="/frontend/img/background/7_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="/frontend/img/background/8_gung.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                </div>
+            </div>
+            <div class="file-home1">
+                <div class="file-title">관광지 사진 선택</div>
+                <div class="file-select">
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_001.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_002.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                </div>
+                <div class="file-select">
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_001.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_002.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                    <div class="file-box">
+                        <img src="https://emt27.cafe24.com/wp-content/uploads/2020/11/lifecut_bg_003.jpg">
+                        <input type="radio" name="input1">
+                    </div>
+                </div>
+            </div>
+            <button class="nextpage"> 다음 </button>
+        </div>
+
+        <form class="form hidden" action="http://211.215.36.146:8080/mask/downloader" method = "POST" enctype = "multipart/form-data">
+            <div class="file-menu">
+                <div class="file-mene__item hidden_item">배경사진 선택</div>
+                <div class="file-mene__item ">인물사진 업로드</div>
+            </div>
+            <div class="upload" >
+                <div class="file-box">
+                    <h2 class="title">배경 이미지</h2>
+                    <div class="file-background">
+                    </div>
+                </div>
+                <div class="file-box">
+                    <h2 class="title">인물사진 업로드</h2>
+                    <div class="file-contents">
+                        <div class="upload-box">
+                            <div id="drop-file" class="drag-file">
+                                <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" >
+                                <p class="message">이곳에 드래그&드롭해 주세요</p>
+                                <img src="" alt="미리보기 이미지" class="preview">
+                            </div>
+                            <label class="file-label" for="chooseFile">파일 선택</label>
+                            <!-- 이미지 올리고 서버로 보내는 부분 form 태그 참조-->
+                            <input class="file" name="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <div class="prviouspage"><a href="/upload">이전</a></div>
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+    <footer class="footer-section">
+        <div class="footer-section__wrap">
+            <div class="footer-top">
+                <img src="https://computer.hufs.ac.kr/sites/ces/images/common/logo_default_on.png?v2">
+                <div class="footer-top__title">SW 중심대학 사업단</div>
+            </div>
+            <div class="footer-buttom">
+                <div>캡스톤 프로젝트</div>
+                <div>3팀</div>
+                <div>Name: 박태규 양재현 김영훈 김동훈</div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="../js/picture.js"></script>
+<script src="../js/imgupload.js"></script>
 </body>
 </html>
