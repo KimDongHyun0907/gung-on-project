@@ -4,8 +4,8 @@ const path = require('path');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const serveIndex = require('serve-index');
 const cookieParser = require('cookie-parser');
+const fs = require('fs');
 
 const auth = require('./backend/middlewares/auth');
 const imageUploadRouter = require("./backend/routes/imageUpload");
@@ -33,12 +33,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(cookieParser());
 
-app.use('/images', serveIndex(path.join(__dirname, '/images')));
-app.use(express.static(__dirname + '/frontend'));
-app.use(express.static(__dirname + '/frontend/css'));
-app.use(express.static(__dirname + '/frontend/js'));
+app.use('/frontend', express.static('frontend'));
 
 app.use(imageUploadRouter);
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/index.html'));
+});
 
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/register/register.html'));
@@ -80,7 +81,14 @@ app.post('/register', async (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/login/login.html'));
+    fs.readFile(`./frontend/pages/login/login.html`, (error, data) => {
+        if (error) {
+            console.log(error);
+            return res.status(500).send("<h1>500 Error</h1>");
+        }
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(data);
+    });
 });
 
 app.post('/login', async (req, res) => {
@@ -107,7 +115,7 @@ app.post('/login', async (req, res) => {
 });
 
 app.get('/gallery', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/gallery.html'));
+    res.sendFile(path.join(__dirname, '/frontend/pages/gallery/gallery.html'));
 });
 
 app.get('/byeolbichyahaeng', (req, res) => {
