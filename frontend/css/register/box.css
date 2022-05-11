@@ -1,6 +1,6 @@
 @import "box_input.css";
 
-.box{
+.box-reg{
     display: block;
     width: 100%;
     border: 1px solid #dadada;
@@ -15,7 +15,7 @@
     height: 6.5vh;
 }
 
-.box img{
+.box-regimg{
     width: 1.5vw;
     height: 3vh;
     display: inline-block;
