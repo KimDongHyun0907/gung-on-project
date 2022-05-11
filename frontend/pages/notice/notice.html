@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="gallery-container">
+<div class="container">
     <div class="main-bar">
         <div class="main-bar__column">
             <a href="/upload">궁궐과 함께 인생 한 컷</a>
@@ -20,24 +20,23 @@
             <a href="/"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
         </div>
         <div class="main-bar__column">
-            <a href="/gallery">궁온 갤러리</a>
+            <a href="/notice">소통의 창</a>
             <a href="/login">로그인</a>
             <a href="/register">회원가입</a>
         </div>
     </div>
-    <div class="gallery-content">
-        <div class="gallery-form">
-            <div class="gallery-form__title">궁온 갤러리 사진 등록</div>
-            <form class="gallery-form__content" action="#" method = "POST" enctype = "multipart/form-data">
-                <div class="gallery-form__file">
-                    <input name="image" type="file" name="gallery" id="gallery-file">
-                    <img id="gallery-img" class="hidden">
-                </div>
-                <div class="gallery-form__input">
-                    <input name="title" type="text" name="title" placeholder="제목">
-                    <input type="submit" value="등록">
-                </div>
-            </form>
+    <div class="main-content">
+        <div class="nav-bar">
+            <img  src="https://emt27.cafe24.com/wp-content/uploads/2020/11/notice_header.jpg">
+            <p class="img-title">소통의창</p>
+            <div class="nav-bar__select">
+                <div class="select-icon1" style="background-color: white;"><a href="/notice">공지사항</a></div>
+                <div class="select-icon1" style="background-color: white;"><a href="/create_notice">공지 등록</a></div>
+                <div class="select-icon2"><a href="/gallery">궁온 갤러리</a></div>
+            </div>
+        </div>
+        <div class="main-content__info">
+            흰색 바탕은 공지사항 작성칸 추후 작성예정
         </div>
     </div>
     <footer class="footer-section">
@@ -54,6 +53,5 @@
         </div>
     </footer>
 </div>
-<script src="/frontend/js/galleryimg.js"></script>
 </body>
 </html>
