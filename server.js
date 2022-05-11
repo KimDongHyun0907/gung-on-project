@@ -37,7 +37,6 @@ app.use('/images', serveIndex(path.join(__dirname, '/images')));
 app.use(express.static(__dirname + '/frontend'));
 app.use(express.static(__dirname + '/frontend/css'));
 app.use(express.static(__dirname + '/frontend/js'));
-app.use(express.static(__dirname + '/frontend/'));
 
 app.use(imageUploadRouter);
 
