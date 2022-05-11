@@ -27,6 +27,13 @@ const sentence = [
         content:"국제사회에서 국가간에 맺는 모든 관계를 뜻하는 외교는 현재 국가 운영에서 빼놓을 수 없는 역할 중 하나가 되었습니다. 그럼 대한제국 시대 외교는 어땠을까요? 덕수궁을 중심으로 펼쳐진 고종의 외교, 함께 그때 그 시절로 되돌아가봅시다!"
     }
 ]
+const ahref =[
+    "/frontend/pages/program/program-saenggwabang.html",
+    "/frontend/pages/program/program-byeolbichyahaeng.html",
+    "/frontend/pages/program/program-dalbichgihaeng.html",
+    "/frontend/pages/program/progrma-myohyeonlye.html",
+    "/frontend/pages/program/program-jeobgyeonlye.html"
+]
 /* title content 초기값 지정*/ 
 const title = document.querySelector(".forth-section__slides--tilte");
 const content = document.querySelector(".forth-section__slides--sentence");
@@ -43,6 +50,14 @@ let pgImage = document.createElement("img");
 const slide=document.querySelector(".forth-section__slides");
 pgImage.src = `${chosenImage}`;
 slide.appendChild(pgImage);
+
+const A = document.querySelector(".forth-section__slides--btn");
+let pga = document.createElement("a");
+pga.className="forth-section__slides--btnA";
+pga.innerText="체험하기";
+let chosenA = ahref[0];
+pga.href = `${chosenA}`;
+A.appendChild(pga);
 
 const prevClick = document.querySelector(".prev");
 const nextClick = document.querySelector(".next");
@@ -63,4 +78,6 @@ function changeImg(n){
     chosenSentence=sentence[count];
     title.innerHTML = chosenSentence.title;
     content.innerText = chosenSentence.content;
+    chosenA = ahref[count];
+    pga.href = `${chosenA}`;
 }

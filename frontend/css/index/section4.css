@@ -49,7 +49,7 @@
   position: relative;
   top:-5%;
 }
-.forth-section__slides--btn{
+.forth-section__slides--btnA{
   text-align: center;
   position: relative;
   left: 40%;
@@ -58,7 +58,7 @@
   border: 1px solid black;
   border-radius: 20%;
 }
-.forth-section__slides--btn:hover{
+.forth-section__slides--btnA:hover{
   background-color: white;
 }
 .controls {
