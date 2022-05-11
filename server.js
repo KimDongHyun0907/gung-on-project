@@ -4,15 +4,12 @@ const path = require('path');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const jwt_decode = require('jwt-decode');
 const serveIndex = require('serve-index');
 const cookieParser = require('cookie-parser');
-const http = require('http');
 
 const auth = require('./backend/middlewares/auth');
 const imageUploadRouter = require("./backend/routes/imageUpload");
 const User = require('./backend/models/user');
-const Post = require('./backend/models/post');
 
 require('dotenv').config();
 const jwt_secret = process.env.JWT_SECRET_STRING
@@ -39,13 +36,8 @@ app.use(cookieParser());
 app.use('/images', serveIndex(path.join(__dirname, '/images')));
 app.use(express.static(__dirname + '/frontend'));
 app.use(express.static(__dirname + '/frontend/css'));
-app.use(express.static(__dirname + '/frontend/css/imgupload'));
-app.use(express.static(__dirname + '/frontend/css/index'));
-app.use(express.static(__dirname + '/frontend/css/login'));
-app.use(express.static(__dirname + '/frontend/css/notice'));
-app.use(express.static(__dirname + '/frontend/css/program'));
-app.use(express.static(__dirname + '/frontend/css/register'));
-
+app.use(express.static(__dirname + '/frontend/js'));
+app.use(express.static(__dirname + '/frontend/'));
 
 app.use(imageUploadRouter);
 
@@ -116,35 +108,30 @@ app.post('/login', async (req, res) => {
 });
 
 app.get('/gallery', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/gallery/gallery.html'));
+    res.sendFile(path.join(__dirname, '/frontend/pages/gallery.html'));
 });
 
-app.get('/notice', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/notice/notice.html'));
+app.get('/byeolbichyahaeng', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/program/program-byeolbichyahaeng.html'));
 });
 
-app.get('/create_notice', auth, (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/registernotice.html'));
+app.get('/dalbichgihaeng', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/program/program-dalbichgihaeng.html'));
 });
 
-app.post('/create_notice', auth, (req, res) => {
-    var user_token = req.cookies.access_token
-    var token_decoded = jwt_decode(user_token)
-    var bodyinput = req.body
-
-    try {
-        const post = Post.create({
-            title: bodyinput.title,
-            content: bodyinput.content,
-            poster: token_decoded.username
-        });
-        return res.send("Post saved!");
-    } catch (error) {
-        console.log(error);
-    }
+app.get('/jeobgyeonlye', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/program/program-jeobgyeonlye.html'));
 });
 
-app.get('/upload', auth, (req, res) => {
+app.get('/myohyeonlye', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/program/progrma-myohyeonlye.html'));
+});
+
+app.get('/saenggwabang', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/program/program-saenggwabang.html'));
+});
+
+app.get('/upload', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
 });
 
