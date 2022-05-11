@@ -1,9 +1,7 @@
 const multer  = require('multer');
-const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path');
 const jwt_decode = require('jwt-decode');
-const cookieParser = require('cookie-parser');
 const auth = require('../middlewares/auth.js');
 const router = express.Router();
 const Image = require('../models/image');
@@ -32,23 +30,32 @@ const upload = multer({
 
 router.use('/images', express.static('images'));
 
-router.get('/upload_gallery', auth, (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/upload.html'));
+router.get('/call_db', async (req, res) => {
+    try{
+        const image = await Image.find();
+        res.json(image);
+    } catch (error) {
+        console.log(error);
+    }
 });
 
-router.post('/upload_gallery', auth, upload.single('imagefile'), function (req, res, next) {
+router.get('/upload_gallery', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/pages/notice/gallery1.html'));
+});
+
+router.post('/upload_gallery', auth, upload.single('image'), function (req, res, next) {
     var user_token = req.cookies.access_token
     var token_decoded = jwt_decode(user_token)
-    var bodyinput = req.body
     try {
-        const image = Image.create({
-            url: "http://localhost:5000/images/" + req.file.filename,
+        Image.create({
+            title: req.body.title,
+            url: "http://ec2-34-209-136-126.us-west-2.compute.amazonaws.com:5000/images/" + req.file.filename,
             user: token_decoded.username
         });
     } catch (error) {
         console.log(error);
     }
-    res.json({ url: "http://localhost:5000/images/"+req.file.filename, user: token_decoded.username });
+    res.redirect('/gallery');
 });
 
 module.exports = router;
