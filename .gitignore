@@ -2,3 +2,4 @@
 /.idea
 /images
 package-lock.json
+.env

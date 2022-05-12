@@ -5,6 +5,7 @@ const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+const multer = require('multer');
 const fs = require('fs');
 
 const auth = require('./backend/middlewares/auth');
@@ -14,6 +15,7 @@ const User = require('./backend/models/user');
 require('dotenv').config();
 const jwt_secret = process.env.JWT_SECRET_STRING
 const connection_string = process.env.CONNECTION_STRING
+const upload = multer();
 const app = express();
 const port = 5000;
 
@@ -30,7 +32,7 @@ app.use(cors());
 //Parsing requests of content-type - application/json
 app.use(express.json());
 //Parsing requests of content-type - application/x-www-form-urlencoded
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/frontend', express.static('frontend'));
@@ -38,14 +40,21 @@ app.use('/frontend', express.static('frontend'));
 app.use(imageUploadRouter);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/index.html'));
+    fs.readFile(`./frontend/index.html`, (error, data) => {
+        if (error) {
+            console.log(error);
+            return res.status(500).send("<h1>500 Error</h1>");
+        }
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(data);
+    });
 });
 
 app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/register/register.html'));
 });
 
-app.post('/register', async (req, res) => {
+app.post('/register', upload.none(), async (req, res) => {
     try{
         const { username, email, password, name, year, month, day, gender, phone_number } = req.body
         const encryptedPassword = await bcrypt.hash(password, 10);
@@ -81,19 +90,13 @@ app.post('/register', async (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-    fs.readFile(`./frontend/pages/login/login.html`, (error, data) => {
-        if (error) {
-            console.log(error);
-            return res.status(500).send("<h1>500 Error</h1>");
-        }
-        res.writeHead(200, { "Content-Type": "text/html" });
-        res.end(data);
-    });
+    res.sendFile(path.join(__dirname, '/frontend/pages/login/login.html'));
 });
 
-app.post('/login', async (req, res) => {
+app.post('/login', upload.none(), async (req, res) => {
+    const { username, password } = req.body;
+    console.log(req.body, username, password);
     try {
-        const { username, password } = req.body;
         const user = await User.findOne({ username });
         if (user && (await bcrypt.compare(password, user.password))) {
             const token = jwt.sign(
@@ -101,14 +104,14 @@ app.post('/login', async (req, res) => {
                 jwt_secret,
                 { expiresIn: "15m" }
             );
+            console.log(token);
 
             user.token = token;
             res.cookie('access_token', token, {
                 httpOnly: true
             });
-            return res.redirect('/');
         }
-        res.sendFile(path.join(__dirname, '/frontend/pages/login/login.html'));
+        return res.redirect('/');
     } catch (err) {
         console.log(err);
     }
@@ -140,10 +143,6 @@ app.get('/saenggwabang', (req, res) => {
 
 app.get('/upload', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
-});
-
-app.post('/upload', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/show.html'));
 });
 
 app.get('/logout', auth, (req, res) => {

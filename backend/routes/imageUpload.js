@@ -39,11 +39,11 @@ router.get('/call_db', async (req, res) => {
     }
 });
 
-router.get('/upload_gallery', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/pages/notice/gallery1.html'));
+router.get('/upload_gallery', auth, (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/pages/gallery/gallery1.html'));
 });
 
-router.post('/upload_gallery', auth, upload.single('image'), function (req, res, next) {
+router.post('/upload_gallery', upload.single('image'), auth, function (req, res, next) {
     var user_token = req.cookies.access_token
     var token_decoded = jwt_decode(user_token)
     try {
