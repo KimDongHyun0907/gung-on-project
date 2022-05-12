@@ -79,7 +79,7 @@ app.post('/register', upload.none(), async (req, res) => {
         user.token = token;
         res.cookie('access_token', token, {
             httpOnly: true
-        }).status(200).json(user)
+        })
     } catch (err) {
         if (err.code === 11000) {
             return res.sendFile(path.join(__dirname, '/frontend/pages/register/register.html'));
