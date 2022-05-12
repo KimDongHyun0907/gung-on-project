@@ -95,7 +95,6 @@ app.get('/login', (req, res) => {
 
 app.post('/login', upload.none(), async (req, res) => {
     const { username, password } = req.body;
-    console.log(req.body, username, password);
     try {
         const user = await User.findOne({ username });
         if (user && (await bcrypt.compare(password, user.password))) {
@@ -104,7 +103,6 @@ app.post('/login', upload.none(), async (req, res) => {
                 jwt_secret,
                 { expiresIn: "15m" }
             );
-            console.log(token);
 
             user.token = token;
             res.cookie('access_token', token, {
