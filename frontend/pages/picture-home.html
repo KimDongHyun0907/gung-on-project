@@ -116,7 +116,7 @@
                 </div>
                 <button class="nextpage"> 다음 </button>
             </div>
-            <form class="form hidden" action="http://211.215.36.146:8080/mask/downloader" method = "POST" enctype = "multipart/form-data">
+            <form class="form hidden" action="/upload" method = "POST" enctype = "multipart/form-data">
                 <div class="file-menu">
                     <div class="file-mene__item hidden_item">배경사진 선택</div>
                     <div class="file-mene__item ">인물사진 업로드</div>
@@ -138,7 +138,7 @@
                                 </div>
                                 <label class="file-label" for="chooseFile">파일 선택</label>
                                 <!-- 이미지 올리고 서버로 보내는 부분 form 태그 참조-->
-                                <input class="file" name="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif"> 
+                                <input class="file" name="user_image" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
                             </div>
                         </div>
                     </div>

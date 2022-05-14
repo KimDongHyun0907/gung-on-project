@@ -36,6 +36,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/frontend', express.static('frontend'));
+app.use('/backend', express.static('backend'));
 
 app.use(imageUploadRouter);
 
@@ -137,14 +138,6 @@ app.get('/myohyeonlye', (req, res) => {
 
 app.get('/saenggwabang', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/program/program-saenggwabang.html'));
-});
-
-app.get('/upload_complete', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/show.html'));
-});
-
-app.get('/upload_complete', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/show.html'));
 });
 
 app.get('/logout', auth, (req, res) => {
