@@ -143,6 +143,12 @@ app.get('/upload', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
 });
 
+app.get('/upload_complete', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/show.html'));
+});
+
+app.
+
 app.get('/logout', auth, (req, res) => {
     res.clearCookie("access_token");
     return res.redirect("/");
