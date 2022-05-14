@@ -11,6 +11,7 @@ const querystring = require('querystring');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
+router.use('/frontend', express.static('frontend'));
 
 const storage = multer.diskStorage({
     destination: './images/', //Directory of where images are stored.
@@ -43,9 +44,10 @@ router.get('/call_db', async (req, res) => {
     }
 });
 
+/*
 router.get('/upload_gallery', auth, (req, res) => {
     res.sendFile(path.join(__dirname, '../../frontend/pages/gallery/gallery1.html'));
-});
+});*/
 
 router.post('/upload_gallery', upload.single('user_image'), auth, function (req, res, next) {
     var user_token = req.cookies.access_token
@@ -62,14 +64,16 @@ router.post('/upload_gallery', upload.single('user_image'), auth, function (req,
     res.redirect('/gallery');
 });
 
+/*
 router.get('/upload', function (req, res) {
     res.sendFile(path.join(__dirname, '../../frontend/pages/picture-home.html'));
-});
+});*/
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
+    console.log("upload");
     var backgroundIndex = req.body.back;
     var upload_image = './images/'+req.file.filename;
-
+    var time = Date.now()
     function base64_encode(file) {
         var bitmap = fs.readFileSync(file);
         return new Buffer(bitmap).toString('base64');
@@ -102,7 +106,7 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
         //console.log(bitmaputf);
         // write buffer to file
         //return bitmap
-        fs.writeFileSync(__dirname + '/user_upload/' + 'userupload' + '.jpg', bitmap);
+        fs.writeFileSync(__dirname + '/user_upload/' + 'userupload' + '_' + time +  '.jpg', bitmap);
     }
 
     YoloResult((err, { result } = {} ) => {
@@ -119,9 +123,23 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
             status: 'success',
             data: {json}
         })*/
-        //res.json(base64_decode(json.result));
-        res.sendFile(__dirname + '../../frontend/pages/show.html');
+        base64_decode(json.result)
+
+        router.get('/imgs', function (req, res) {
+            fs.readFile('./backend/routes/user_upload/userupload'+time+'.jpg', function (error, data) {
+                res.writeHead(200,{"Content-Type": "image/jpg"});
+                res.write(data);
+                res.end();
+            });
+            //console.log("json!!!!!!!!!!!!!!!!!!!!!!!!!!!!/imgs");
+            //console.log(json);
+            //res.send(200);
+        });
+
+        res.sendFile(path.join(__dirname, '../../frontend/pages/show.html'));
     });
 });
+
+
 
 module.exports = router;

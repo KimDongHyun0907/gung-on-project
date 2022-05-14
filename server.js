@@ -140,6 +140,14 @@ app.get('/saenggwabang', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/program/program-saenggwabang.html'));
 });
 
+app.get('/upload_gallery', auth, (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/gallery/gallery1.html'));
+});
+
+app.get('/upload', function (req, res) {
+    res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
+});
+
 app.get('/logout', auth, (req, res) => {
     res.clearCookie("access_token");
     return res.redirect("/");

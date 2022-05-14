@@ -1,5 +1,6 @@
 const maskimg = document.querySelector(".show-img");
-fetch('http://211.215.36.146:8081/api/test/3')
+console.log("asdsa");
+fetch('http://localhost:5000/upload')
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
