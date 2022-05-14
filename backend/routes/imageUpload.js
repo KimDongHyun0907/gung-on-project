@@ -87,7 +87,6 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
                 imgIndex: backgroundIndex
             }
         }
-        //console.log(options)
 
         request(options, function (err, res, body) {
             callback(undefined, {
@@ -97,13 +96,7 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
     }
 
     function base64_decode(base64str, file) {
-        // create buffer object from base64 encoded string, it is important to tell the constructor that the string is base64 encoded
-        //var bitmap = new Buffer(base64str, 'base64');
         var bitmap = Buffer.from(base64str.toString("utf-8"), 'base64');
-        //var bitmaputf = bitmap.toString("utf-8");
-        //console.log(bitmaputf);
-        // write buffer to file
-        //return bitmap
         fs.writeFileSync(__dirname + '/user_upload/' + 'userupload' + '_' + time +  '.jpg', bitmap);
     }
 
@@ -116,28 +109,17 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
             });
         }
         let json = JSON.parse(result);
-        /*res.send({
-            message: 'from flask',
-            status: 'success',
-            data: {json}
-        })*/
         base64_decode(json.result)
-
         router.get('/imgs', function (req, res) {
             fs.readFile('./backend/routes/user_upload/userupload'+time+'.jpg', function (error, data) {
                 res.writeHead(200,{"Content-Type": "image/jpg"});
                 res.write(data);
                 res.end();
             });
-            //console.log("json!!!!!!!!!!!!!!!!!!!!!!!!!!!!/imgs");
-            //console.log(json);
-            //res.send(200);
         });
 
         res.sendFile(path.join(__dirname, '../../frontend/pages/show.html'));
     });
 });
-
-
 
 module.exports = router;
