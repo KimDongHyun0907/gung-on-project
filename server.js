@@ -139,8 +139,8 @@ app.get('/saenggwabang', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/pages/program/program-saenggwabang.html'));
 });
 
-app.get('/upload', (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
+app.get('/upload_complete', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/pages/show.html'));
 });
 
 app.get('/upload_complete', (req, res) => {
