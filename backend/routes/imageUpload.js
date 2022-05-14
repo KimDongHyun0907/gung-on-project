@@ -7,7 +7,6 @@ const auth = require('../middlewares/auth.js');
 const router = express.Router();
 const Image = require('../models/image');
 const fs = require('fs');
-const querystring = require('querystring');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
@@ -44,10 +43,9 @@ router.get('/call_db', async (req, res) => {
     }
 });
 
-/*
 router.get('/upload_gallery', auth, (req, res) => {
     res.sendFile(path.join(__dirname, '../../frontend/pages/gallery/gallery1.html'));
-});*/
+});
 
 router.post('/upload_gallery', upload.single('user_image'), auth, function (req, res, next) {
     var user_token = req.cookies.access_token
@@ -64,10 +62,10 @@ router.post('/upload_gallery', upload.single('user_image'), auth, function (req,
     res.redirect('/gallery');
 });
 
-/*
+
 router.get('/upload', function (req, res) {
     res.sendFile(path.join(__dirname, '../../frontend/pages/picture-home.html'));
-});*/
+});
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
     console.log("upload");
