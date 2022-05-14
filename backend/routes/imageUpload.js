@@ -7,6 +7,7 @@ const auth = require('../middlewares/auth.js');
 const router = express.Router();
 const Image = require('../models/image');
 const fs = require('fs');
+const querystring = require('querystring');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
@@ -61,8 +62,8 @@ router.post('/upload_gallery', upload.single('user_image'), auth, function (req,
     res.redirect('/gallery');
 });
 
-router.get('/upload', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/pages/show.html'));
+router.get('/upload', function (req, res) {
+    res.sendFile(path.join(__dirname, '../../frontend/pages/picture-home.html'));
 });
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
@@ -100,8 +101,8 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
         //var bitmaputf = bitmap.toString("utf-8");
         //console.log(bitmaputf);
         // write buffer to file
-        return bitmap
-        //fs.writeFileSync(__dirname + '/user_upload/'+file, bitmap);
+        //return bitmap
+        fs.writeFileSync(__dirname + '/user_upload/' + 'userupload' + '.jpg', bitmap);
     }
 
     YoloResult((err, { result } = {} ) => {
@@ -118,9 +119,8 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
             status: 'success',
             data: {json}
         })*/
-        res.sendFile(path.join(__dirname, '../../frontend/pages/show.html'));
         //res.json(base64_decode(json.result));
-        //res.sendFile(path.join(__dirname, '../../frontend/pages/show.html'));
+        res.sendFile(__dirname + '../../frontend/pages/show.html');
     });
 });
 
