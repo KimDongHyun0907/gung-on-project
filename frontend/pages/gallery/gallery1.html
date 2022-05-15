@@ -15,10 +15,10 @@
     <div class="gallery-container">
         <div class="main-bar">
             <div class="main-bar__column">
-                <a href="/frontend/pages/picture-home.html">궁궐과 함께 인생 한 컷</a>
+                <a href="/upload">궁궐과 함께 인생 한 컷</a>
             </div>
             <div class="main-bar__column">
-                <a href="/frontend/index.html"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
+                <a href="/"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
             </div>
             <div class="main-bar__column">
                 <a href="/frontend/pages/gallery/gallery.html">궁온 갤러리</a>
@@ -29,9 +29,9 @@
         <div class="gallery-content">
             <div class="gallery-form">
                 <div class="gallery-form__title">궁온 갤러리 사진 등록</div>
-                <form class="gallery-form__content" action="#" method = "POST" enctype = "multipart/form-data">
+                <form class="gallery-form__content" action="/upload_gallery" method = "POST" enctype = "multipart/form-data">
                     <div class="gallery-form__file">
-                        <input type="file" name="gallery" id="gallery-file">
+                        <input type="file" name="user_image" id="gallery-file">
                         <img id="gallery-img" class="hidden">
                     </div>
                     <div class="gallery-form__input">

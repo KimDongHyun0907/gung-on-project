@@ -14,10 +14,10 @@
 <body>
     <div class="main-bar">
         <div class="main-bar__column">
-            <a href="/frontend/pages/picture-home.html">궁궐과 함께 인생 한 컷</a>
+            <a href="/upload">궁궐과 함께 인생 한 컷</a>
         </div>
         <div class="main-bar__column">
-            <a href="/frontend/index.html"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
+            <a href="/"><img src="https://computer.hufs.ac.kr/sites/ces/images/common/f_logo.png"></a>
         </div>
         <div class="main-bar__column">
             <a href="/frontend/pages/gallery/gallery.html">궁온 갤러리</a>
@@ -35,7 +35,7 @@
                             <label for="id">아이디</label>
                         </h3>
                         <span class="box-reg int_id">
-                            <input type="text" id="id" class="int" maxlength="20">
+                            <input name="username" type="text" id="id" class="int" maxlength="20">
                         </span>
                         <span class="error_next_box"></span>
                     </div>
@@ -44,7 +44,7 @@
                             <label for="pw">비밀번호</label>
                         </h3>
                         <span class="box-reg int_pw">
-                            <input type="password" id="pw" class="int" maxlength="20">
+                            <input name="password" type="password" id="pw" class="int" maxlength="20">
                             <span id="alerttxt">사용불가</span>
                             <img class="box-regimg" src="/frontend/img/m_icon_pass.png" id="pw_img1">
                         </span>
@@ -65,7 +65,7 @@
                             <label for="name">이름</label>
                         </h3>
                         <span class="box-reg int_name">
-                            <input type="text" id="name" class="int" maxlength="20">   
+                            <input name="name" type="text" id="name" class="int" maxlength="20">
                         </span>
                         <span class="error_next_box"></span>
                     </div>
@@ -76,12 +76,12 @@
                         <div id="bir_wrap">
                             <div id="bir_year">
                                 <span class="box bir">
-                                    <input type="text" id="year" class="int" maxlength="4" placeholder="년(4자)">
+                                    <input name="year" type="text" id="year" class="int" maxlength="4" placeholder="년(4자)">
                                 </span>
                             </div>
                             <div id="bir_month">
                                 <span class="box bir">
-                                    <select id="month" class="sel">
+                                    <select name="month" id="month" class="sel">
                                         <option>월</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -100,7 +100,7 @@
                             </div>
                             <div id="bir_day">
                                 <span class="box bir">
-                                    <input type="text" id="day" class="int" maxlength="2" placeholder="일">
+                                    <input name="day" type="text" id="day" class="int" maxlength="2" placeholder="일">
                                 </span>
                             </div>
                         </div>
@@ -111,10 +111,10 @@
                             <label for="gender">성별</label>
                         </h3>
                         <span class="box-reg int_gender">
-                            <select id="gender" class="sel">
+                            <select name="gender" id="gender" class="sel">
                                 <option>성별</option>
-                                <option value="man">남자</option>
-                                <option value="woman">여자</option>
+                                <option value="남자">남자</option>
+                                <option value="여자">여자</option>
                             </select>                        
                         </span>
                         <span class="error_next_box">필수 정보입니다.</span>
@@ -125,7 +125,7 @@
                             <label for="email">이메일</label>
                         </h3>
                         <span class="box-reg int_email">
-                            <input type="text" id="email" class="int">
+                            <input name="email" type="text" id="email" class="int">
                         </span>
                         <span class="error_next_box">이메일 주소를 다시 확인해주세요</span>
                     </div>
@@ -134,7 +134,7 @@
                             <label for="phone">휴대전화 (ex) 01012345678 ('-'제외))</label>
                         </h3>
                         <span class="box-reg int_phone">
-                            <input type="tel" id="phone" class="int" placeholder="번호 입력">
+                            <input name="phone_number" type="tel" id="phone" class="int" placeholder="번호 입력">
                         </span>
                         <span class="error_next_box"></span>
                     </div>
@@ -158,6 +158,6 @@
             </div>
         </div>
     </footer>
-    <script src="/frontend/js/register.js"></script>
+    <script src="frontend/js/register.js"></script>
 </body>
 </html>
