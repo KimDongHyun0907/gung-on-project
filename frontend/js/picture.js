@@ -10,10 +10,10 @@ input2.setAttribute("type","text");
 input2.setAttribute("name","size");
 const input3 = document.createElement("input");
 input3.setAttribute("type","text");
-input3.setAttribute("name","position");
+input3.setAttribute("name","corner");
 const input4 = document.createElement("input");
 input4.setAttribute("type","text");
-input4.setAttribute("name","offsetX");
+input4.setAttribute("name","pos");
 
 const next = document.querySelector(".nextpage");
 next.addEventListener("click",choseedit);

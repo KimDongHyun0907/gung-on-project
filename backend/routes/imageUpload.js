@@ -134,7 +134,7 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
         let json = JSON.parse(result);
         base64_decode(json.result)
         router.get('/imgs', function (req, res) {
-            fs.readFile('./backend/routes/user_upload/userupload'+time+'.jpg', function (error, data) {
+            fs.readFile('./backend/routes/user_upload/userupload_'+time+'.jpg', function (error, data) {
                 res.writeHead(200,{"Content-Type": "image/jpg"});
                 res.write(data);
                 res.end();
