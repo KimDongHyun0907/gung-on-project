@@ -77,6 +77,7 @@ app.post('/register', upload.none(), async (req, res) => {
         }
         throw err
     }
+    console.log("User registered.");
     return res.sendFile(path.join(__dirname, '/frontend/pages/login/login.html'));
 });
 
@@ -85,6 +86,7 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', upload.none(), async (req, res) => {
+    console.log("Attempting login...")
     const { username, password } = req.body;
     try {
         const user = await User.findOne({ username });

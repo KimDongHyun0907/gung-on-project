@@ -84,7 +84,7 @@ router.get('/upload', function (req, res) {
 });
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
-    console.log("upload");
+    console.log("POST file to http://###.###.##.###:####/api/mask/downloader");
     var backgroundIndex = req.body.back;
     var img_corner = req.body.corner;
     var img_pos = req.body.pos;
@@ -131,6 +131,7 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
                 status: "fail"
             });
         }
+        console.log("GET file from server: http://###.###.##.###:####/api/mask/downloader");
         let json = JSON.parse(result);
         base64_decode(json.result)
         router.get('/imgs', function (req, res) {
