@@ -35,7 +35,8 @@
                 <div class="file-home1">
                     <div class="file-menu">
                         <div class="file-mene__item">배경사진 선택</div>
-                        <div class="file-mene__item hidden_item">인물사진 업로드</div>
+                        <div class="file-mene__item hidden_item">인물사진 편집</div>
+                        <div class="file-mene__item  hidden_item">인물사진 업로드</div>
                     </div>
                     <div class="file-title">궁궐사진 선택</div>
                     <div class="file-select">
@@ -116,10 +117,63 @@
                 </div>
                 <button class="nextpage"> 다음 </button>
             </div>
+            <div class="changeimg hidden">
+                <div class="file-menu">
+                    <div class="file-mene__item hidden_item">배경사진 선택</div>
+                    <div class="file-mene__item">인물사진 편집</div>
+                    <div class="file-mene__item  hidden_item">인물사진 업로드</div>
+                </div>
+                <div class="change-img">
+                    <div class="change-ex1">
+                        더욱 만족스러운 사진 합성을 위해 궁온 서비스는 크기,위치 조절 기능을 제공합니다<br>
+                        아래와 같이 작업이 진행되므로 참고해서 설정해 주세요!!
+                    </div>
+                    <div class="change-ex1_size">
+                            <div class="change-ex1_box">
+                                <div class="change-title">
+                                    1. 인물사진 크기 조절
+                                </div>
+                                <div class="change-explain">
+                                    인물사진 크기를 오른쪽 사진과 같이 조절 합니다<br>
+                                    원하는 %만큼 크기를 조절해 주세요!
+                                </div>
+                                <div class="change-input">
+                                    <div>크기 입력 (기본 값: 10)</div>
+                                    <input type="text" id="editvalue1"> 
+                                </div>
+                            </div>
+                            <img src="/frontend/img/edit1.jpg">                
+                    </div>
+                    <div class="change-ex1_size">
+                        <div class="change-ex1_box">
+                            <div class="change-title">
+                                2. 인물사진 위치 조절
+                            </div>
+                            <div class="change-explain">
+                                인물사진 위치를 오른쪽 사진과 같이 조절 합니다<br>
+                                오른쪽 사진의 예로 들면 자신의 셀카 사진에 위치가 <br>
+                                1,2,3,4 번중 어느곳에 해당하는 지 입력 후<br>
+                                이동하고 싶은 비율을 0~100까지 입력해 주세요 <br>
+                            </div>
+                            <div class="change-input">
+                                <div>
+                                    <div>셀카 위치 입력</div><input type="text" id="editvalue2">
+                                </div>
+                                <div>
+                                    <div>이동 비율 입력 (0~100)</div><input type="text" id="editvalue3">
+                                </div>
+                            </div>
+                        </div> 
+                        <img src="/frontend/img/edit2.jpg">
+                    </div>
+                </div>
+                <button class="nextpage1"> 다음 </button>
+            </div>
             <form class="form hidden" action="http://211.215.36.146:8080/mask/downloader" method = "POST" enctype = "multipart/form-data">
                 <div class="file-menu">
                     <div class="file-mene__item hidden_item">배경사진 선택</div>
-                    <div class="file-mene__item ">인물사진 업로드</div>
+                    <div class="file-mene__item hidden_item">인물사진 편집</div>
+                    <div class="file-mene__item">인물사진 업로드</div>
                 </div>
                 <div class="upload" >
                     <div class="file-box">
@@ -144,7 +198,7 @@
                     </div>
                 </div>
                 <div class="submit">
-                    <div class="prviouspage"><a href="/frontend/pages/picture-home.html">이전</a></div>
+                    <div class="prviouspage"><a href="/frontend/pages/picture-home.html">처음부터</a></div>
                     <input type="submit">
                 </div>
             </form>

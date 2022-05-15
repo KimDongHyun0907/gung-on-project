@@ -1,0 +1,42 @@
+.change-img{
+    display: flex; 
+    flex-direction: column;
+}
+.change-ex1{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 7% 0;
+}
+.change-ex1_size{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.change-ex1_size img{
+    width: 40vw;
+    height: 55vh;
+}
+.change-ex2_change{
+    display: flex;
+    justify-content: space-around;
+}
+.change-ex1_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.change-title{
+    font-size: 1.7em;
+}
+.change-explain{
+    margin-top: 8%;
+    font-size: 1.3em;
+}
+.change-input{
+    display: flex ;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 10%;
+    width: 70%;
+}

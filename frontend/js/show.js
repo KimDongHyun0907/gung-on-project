@@ -4,5 +4,5 @@ fetch('http://211.215.36.146:8081/api/test/3')
   .then((data) => {
     console.log(data);
     maskimg.src =  "data:image/;base64,"+data.img;
-    });
+  });
   

@@ -52,7 +52,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.nextpage{
+.nextpage, .nextpage1{
     border: none;
     background-color: #5b975b;
     width: 8vw;
