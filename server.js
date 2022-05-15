@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const fs = require('fs');
+const jwt_decode = require('jwt-decode');
 
 const auth = require('./backend/middlewares/auth');
 const imageUploadRouter = require("./backend/routes/imageUpload");
@@ -70,17 +71,6 @@ app.post('/register', upload.none(), async (req, res) => {
             gender,
             phone_number
         });
-
-        const token = jwt.sign(
-            { user_id: user._id, username },
-            jwt_secret,
-            { expiresIn: "15m" }
-        );
-
-        user.token = token;
-        res.cookie('access_token', token, {
-            httpOnly: true
-        })
     } catch (err) {
         if (err.code === 11000) {
             return res.sendFile(path.join(__dirname, '/frontend/pages/register/register.html'));
@@ -102,12 +92,17 @@ app.post('/login', upload.none(), async (req, res) => {
             const token = jwt.sign(
                 { user_id: user._id, username },
                 jwt_secret,
-                { expiresIn: "15m" }
+                { expiresIn: "10m" }
             );
 
             user.token = token;
             res.cookie('access_token', token, {
                 httpOnly: true
+            });
+            app.get('/token', function (req, res) {
+                var user_token = req.cookies.access_token
+                var token_decoded = jwt_decode(user_token)
+                res.send(token_decoded);
             });
         }
         return res.redirect('/');

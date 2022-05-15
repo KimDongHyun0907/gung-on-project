@@ -2,11 +2,16 @@ const multer  = require('multer');
 const express = require('express');
 const path = require('path');
 const request = require('request');
+const jwt = require('jsonwebtoken');
 const jwt_decode = require('jwt-decode');
-const auth = require('../middlewares/auth.js');
-const router = express.Router();
-const Image = require('../models/image');
 const fs = require('fs');
+require('dotenv').config();
+
+const auth = require('../middlewares/auth.js');
+const Image = require('../models/image');
+
+const router = express.Router();
+const jwt_secret = process.env.JWT_SECRET_STRING
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
@@ -56,6 +61,17 @@ router.post('/upload_gallery', upload.single('user_image'), auth, function (req,
             url: "http://ec2-34-209-136-126.us-west-2.compute.amazonaws.com:5000/images/" + req.file.filename,
             user: token_decoded.username
         });
+        const token = jwt.sign(
+            {
+                user_id: token_decoded.user_id,
+                username: token_decoded.username
+            },
+            jwt_secret,
+            { expiresIn: "10m" }
+        );
+        res.cookie('access_token', token, {
+            httpOnly: true
+        });
     } catch (error) {
         console.log(error);
     }
@@ -70,8 +86,12 @@ router.get('/upload', function (req, res) {
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
     console.log("upload");
     var backgroundIndex = req.body.back;
+    var img_corner = req.body.corner;
+    var img_pos = req.body.pos;
+    var img_size = req.body.size;
     var upload_image = './images/'+req.file.filename;
     var time = Date.now()
+
     function base64_encode(file) {
         var bitmap = fs.readFileSync(file);
         return new Buffer(bitmap).toString('base64');
@@ -84,7 +104,10 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
             uri: "http://211.215.36.146:8080/api/mask/downloader",
             form: {
                 image: base64image,
-                imgIndex: backgroundIndex
+                imgIndex: backgroundIndex,
+                corner: img_corner,
+                pos: img_pos,
+                size: img_size
             }
         }
 
