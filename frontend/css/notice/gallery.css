@@ -47,7 +47,6 @@
   flex-wrap: wrap;
 }
 .gallery-box{
-  border: 1px solid rebeccapurple;
   width: 30vw;
   height: 40vh;
   display: flex;
