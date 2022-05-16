@@ -145,7 +145,7 @@ app.get('/upload', function (req, res) {
     res.sendFile(path.join(__dirname, '/frontend/pages/picture-home.html'));
 });
 
-app.get('/logout', auth, (req, res) => {
+app.get('/logout', (req, res) => {
     res.clearCookie("access_token");
     return res.redirect("/");
 });
