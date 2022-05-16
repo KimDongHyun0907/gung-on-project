@@ -35,7 +35,7 @@ function checkPw() {
         error[1].innerHTML = "필수 정보입니다.";
         error[1].style.display = "block";
         pwmsg.innerHTML="";
-        pw_img1.src = "../img/m_icon_pass.png";
+        pw_img1.src = "/frontend/img/m_icon_pass.png";
     } else if(!pwPattern.test(pw.value)) {
         error[1].innerHTML = "8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.";
         pwmsg.innerHTML = "사용불가";
@@ -43,13 +43,13 @@ function checkPw() {
         error[1].style.display = "block";
         
         pwmsg.style.display = "block";
-        pw_img1.src = "../img/m_icon_not_use.png";
+        pw_img1.src = "/frontend/img/m_icon_not_use.png";
     } else {
         error[1].style.display = "none";
         pwmsg.innerHTML = "안전";
         pwmsg.style.display = "block";
         pwmsg.style.color = "green";
-        pw_img1.src = "../img/m_icon_safe.png";
+        pw_img1.src = "/frontend/img/m_icon_safe.png";
     }
 }
 
@@ -59,12 +59,12 @@ pw2.addEventListener("focusout", comparePw);
 
 function comparePw() {
     if(pw2.value === pw.value && pw2.value != "") {
-        pw_img2.src = "../img/m_icon_check_enable.png";
+        pw_img2.src = "/frontend/img/m_icon_check_enable.png";
         error[2].innerHTML="비밀번호가 일치합니다."
         error[2].style.color='green';
         error[2].style.display = "block";
     } else if(pw2.value !== pw.value) {
-        pw_img2.src = "../img/m_icon_check_disable.png";
+        pw_img2.src = "/frontend/img/m_icon_check_disable.png";
         error[2].innerHTML = "비밀번호가 일치하지 않습니다.";
         error[2].style.color='red';
         error[2].style.display = "block";
