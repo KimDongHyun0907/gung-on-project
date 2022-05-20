@@ -4,9 +4,6 @@ const navBtn1 = document.querySelector(".main-bar__column:last-child>a:nth-child
 const navBtn2 = document.querySelector(".main-bar__column:last-child>a:last-child");
 //유저버튼
 //로그아웃버튼
-const userBtn = document.createElement("a");
-const logoutBtn = document.createElement("a");
-
 const nav = document.querySelector(".main-bar__column:last-child");
 
 
@@ -18,7 +15,7 @@ fetch('http://ec2-34-209-136-126.us-west-2.compute.amazonaws.com:5000/token')
         navBtn1.classList.add("hidden");
         navBtn2.classList.add("hidden");
         //유저 로그아웃 버튼 생성
-        const userBtn = document.createElement("span");
+        const userBtn = document.createElement("a");
         const logoutBtn = document.createElement("a");
         userBtn.innerHTML = data.username; // 토큰에 있는 username 
         logoutBtn.text = "로그아웃";
