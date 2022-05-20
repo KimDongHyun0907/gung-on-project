@@ -60,7 +60,6 @@ router.post('/upload_gallery', upload.single('user_image'), auth, function (req,
             title: req.body.title,
             url: "http://ec2-34-209-136-126.us-west-2.compute.amazonaws.com:5000/images/" + req.file.filename,
             user: token_decoded.username
-            name: token_decoded.name
         });
         const token = jwt.sign(
             {
