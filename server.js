@@ -92,7 +92,7 @@ app.post('/login', upload.none(), async (req, res) => {
         const user = await User.findOne({ username });
         if (user && (await bcrypt.compare(password, user.password))) {
             const token = jwt.sign(
-                { user_id: user._id, username },
+                { user_id: user._id, username, name: user.name },
                 jwt_secret,
                 { expiresIn: "10m" }
             );

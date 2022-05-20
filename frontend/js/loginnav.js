@@ -11,12 +11,12 @@ const logoutBtn = document.createElement("a");
 fetch('http://ec2-34-209-136-126.us-west-2.compute.amazonaws.com:5000/token')
   .then((response) => response.json())
   .then((data) => {
-    if(data.username != undefined){
+    if(data.name != undefined){
         //기존 로그인 화원가입 버튼 지우기
         navBtn1.classList.add("hidden");
         navBtn2.classList.add("hidden");
         //유저 로그아웃 버튼 생성
-        userBtn.innerHTML = data.username; // 토큰에 있는 username 
+        userBtn.innerHTML = data.name; // 토큰에 있는 username
         logoutBtn.text = "로그아웃";
         nav.appendChild(userBtn); 
         nav.appendChild(logoutBtn);
