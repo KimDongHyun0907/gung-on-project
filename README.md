@@ -22,27 +22,27 @@
 
 ##### 역할 분담
 
-- 박태규 : front-end
-- 양재현 : front-end
-- 김영훈 : back-end, Deeplearning
-- 김동현 : back-end
--
+- 박태규(FE) : 메인페이지, 궁궐과 인생 한 컷 페이지, 궁온 갤러리페이지 제작
+- 김동현(FE) : 궁온 프로그램 소개, 로그인, 회원 가입페이지 제작
+- 김영훈(BE) : 궁온 갤러리 서버 구축, 로그인 및 회원가입 서버 구축 
+- 양재현(BE,DL) : 궁궐과 인생 한 컷 서버 구축, 이미지 합성 모델 제작(Sementic Segmantation)
 
 ##### 개발 환경
 
-- 프로그램 언어
-  <br/> ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)<br/> ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) <br/>![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)<br/> ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-- 프레임 워크
-  <br/> ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)<br/> ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-- DB
-  <br/>![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+ - 프로그램 언어
+ <br/> ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+ - 프레임 워크 
+<br/> ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)  ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+ - DB
+<br/>![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 - Hosting
-  <br/>![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+<br/>![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 
 ##### 딥러닝
 
 - Image Segmentation 모델 : DeepLabV3
-- backbone : Resnet-101
+- BackBone : Resnet-101
 
 ##### 흐름도
 ![image](https://user-images.githubusercontent.com/64758823/170308069-a946793c-1ace-4907-9bfd-c0b74276dbf0.png)
