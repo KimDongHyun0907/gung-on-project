@@ -1,4 +1,5 @@
 # 2022-1 한국외대 캡스톤 프로젝트
+---
 
 ### '궁궐과 함께 인생 한 컷' 궁온 서비스
 >이미지 처리 분야의 Deeplearning 기술을 이용하여 인물 사진과 궁궐 사진을 합성해주는 서비스  
@@ -27,12 +28,12 @@
 
 ##### 역할 분담
 
-- 박태규(FE) : 메인페이지, 궁궐과 인생 한 컷 페이지, 궁온 갤러리페이지 제작
+- 박태규(PM,FE) : 메인페이지, 궁궐과 인생 한 컷 페이지, 궁온 갤러리페이지 제작
 - 김동현(FE) : 궁온 프로그램 소개, 로그인, 회원 가입페이지 제작
 - 김영훈(BE) : 궁온 갤러리 서버 구축, 로그인 및 회원가입 서버 구축 
 - 양재현(BE,DL) : 궁궐과 인생 한 컷 서버 구축, 이미지 합성 모델 제작(Sementic Segmantation)
 
-##### 개발 환경
+##### 기술 스택
 
  - 프로그램 언어
  <br/> ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
