@@ -4,13 +4,13 @@
 
 ### 1. 프로젝트 소개
  
-  ##### 추친배경
+##### 추친배경
  
 
  - 2022년 코로나19의 확산이 줄어들어 거리두기가 해제되었지만 여전히 바쁜 현대인들은 시간과 공간의 제약으로 인해 관광지 관람이 어렵다. 그래서 본 서비스는 사용자 사진과 궁궐 사진을 합성하여 추억으로 간직할 수 있게 기념사진을 만들어 사용자에게 제공해주는 서비스를 개발하게 되었다. 물론 포토샵으로 사진을 합성 할 수 있지만 본 서비스는 현재 유망한 딥러닝 기술을 이용하여  포토샵 보다 훨씬 정확한 인물사진 합성이 가능하다.
 
 
-  ##### 프로젝트 목표
+##### 프로젝트 목표
 - 이미지에 있는 픽셀을 해당 클래스로 분류하는 Semantic Segmentation을 활용하여 인물 사진과 배경 사진을 합성한다.
 - 다양한 Semantic Segmentation 모델을 사용하여 이미지 내부에 있는 객체를 분류하는 것을 목표로 한다. 
 - 인물과 배경을 합성하기 위해 사용자가 원하는 자리에 인물을 배치할 수 있도록 인터페이스를 설정한다. 
@@ -18,6 +18,13 @@
 - DB를 사용하여 로그인과 회원가입 기능을 이용해 회원 관리를 한다.
 
 ### 2. 프로젝트 정보
+##### 역할 분담
+
+- 박태규 : front-end
+- 양재현 : front-end
+- 김영훈 : back-end, Deeplearning
+- 김동현 : back-end
+- 
 ##### 개발 환경
   - 프로그램 언어
  <br/> ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)<br/>     ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) <br/>![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)<br/> ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
@@ -28,7 +35,7 @@
 - Hosting
 <br/>![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-  ##### 딥러닝
+##### 딥러닝
 - Image Segmentation 모델 : DeepLabV3
 - backbone : Resnet-101
 
@@ -50,5 +57,3 @@
 - 시간과 공간의 제약을 받지 않고 궁궐 체험을 할 수 있 수 있다
 - 비대면 온라인 서비스로 체험하고 나면 흥미를 높일 수 있어 직접 체험하기 위해 그곳으로 여행을 가는 사람들이 증가할 수 있다
 - Semantic Segmentation을 활용해 배경과 인물을 합성하여 다양한 목적으로 사진을 남길 수 있다.
-
-
