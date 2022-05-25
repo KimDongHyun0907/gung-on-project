@@ -23,10 +23,8 @@
  <br/> ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)<br/>     ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) <br/>![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)<br/> ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
  - 프레임 워크 
 <br/> ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)<br/> ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-
  - DB
 <br/>![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-
 - Hosting
 <br/>![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
@@ -50,6 +48,8 @@
 
 
 ### 4. 기대효과
-
+- 시간과 공간의 제약을 받지 않고 궁궐 체험을 할 수 있 수 있다
+- 비대면 온라인 서비스로 체험하고 나면 흥미를 높일 수 있어 직접 체험하기 위해 그곳으로 여행을 가는 사람들이 증가할 수 있다
+- Semantic Segmentation을 활용해 배경과 인물을 합성하여 다양한 목적으로 사진을 남길 수 있다.
 
 
