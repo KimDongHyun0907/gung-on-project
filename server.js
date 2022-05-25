@@ -9,9 +9,9 @@ const multer = require('multer');
 const fs = require('fs');
 const jwt_decode = require('jwt-decode');
 
-const auth = require('./backend/middlewares/auth');
-const imageUploadRouter = require("./backend/routes/imageUpload");
-const User = require('./backend/models/user');
+const auth = require('./backend/nodejs/middlewares/auth');
+const imageUploadRouter = require("./backend/nodejs/routes/imageUpload");
+const User = require('./backend/nodejs/models/user');
 
 require('dotenv').config();
 const jwt_secret = process.env.JWT_SECRET_STRING

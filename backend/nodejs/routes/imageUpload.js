@@ -49,7 +49,7 @@ router.get('/call_db', async (req, res) => {
 });
 
 router.get('/upload_gallery', auth, (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/pages/gallery/gallery1.html'));
+    res.sendFile(path.join(__dirname, '../../../frontend/pages/gallery/gallery1.html'));
 });
 
 router.post('/upload_gallery', upload.single('user_image'), auth, function (req, res, next) {
@@ -81,7 +81,7 @@ router.post('/upload_gallery', upload.single('user_image'), auth, function (req,
 
 
 router.get('/upload', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../frontend/pages/picture-home.html'));
+    res.sendFile(path.join(__dirname, '../../../frontend/pages/picture-home.html'));
 });
 
 router.post('/upload', upload.single('user_image'), function (req, res, next) {
@@ -136,14 +136,14 @@ router.post('/upload', upload.single('user_image'), function (req, res, next) {
         var name_img = json.name
         base64_decode(json.result, name_img)
         router.get('/imgs', function (req, res) {
-            fs.readFile('./backend/routes/user_upload/userupload_'+name_img+'.jpg', function (error, data) {
+            fs.readFile('./backend/nodejs/routes/user_upload/userupload_'+name_img+'.jpg', function (error, data) {
                 res.writeHead(200,{"Content-Type": "image/jpg"});
                 res.write(data);
                 res.end();
             });
         });
 
-        res.sendFile(path.join(__dirname, '../../frontend/pages/show.html'));
+        res.sendFile(path.join(__dirname, '../../../frontend/pages/show.html'));
     });
 });
 
