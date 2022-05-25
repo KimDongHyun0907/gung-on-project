@@ -3,6 +3,9 @@
 
 ### '궁궐과 함께 인생 한 컷' 궁온 서비스
 >이미지 처리 분야의 Deeplearning 기술을 이용하여 인물 사진과 궁궐 사진을 합성해주는 서비스  
+[시연 동영상 링크](https://drive.google.com/file/d/1RGY0ss86YycGzwsdCC5hLNVVgj81U5BA/view?usp=sharing)
+
+
 <br/>
 
 ---
