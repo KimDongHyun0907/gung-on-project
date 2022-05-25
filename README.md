@@ -45,20 +45,20 @@
 - backbone : Resnet-101
 
 ##### 흐름도
+![image](https://user-images.githubusercontent.com/64758823/170308069-a946793c-1ace-4907-9bfd-c0b74276dbf0.png)
 
-ㄴ
 
 ##### 화면 설계
+![image](https://user-images.githubusercontent.com/64758823/170308013-f3a672b4-69c8-46a2-90fd-19333930ce8d.png)
 
-ㄴ
 
 ### 3. 프로젝트 결과물
 
-1. 배경 선택
-2. 인물 사진 크기 및 위치 선택
-3. 인물 사진 업로드
-4. 합성 결과물 다운로드
-5. 궁온 갤러리 전시
+1. 배경 선택 <br/> ![image](https://user-images.githubusercontent.com/64758823/170308142-039eacb6-531b-42c3-97f4-277a4cb18910.png)
+2. 인물 사진 크기 및 위치 선택 <br/> ![image](https://user-images.githubusercontent.com/64758823/170308158-6075e95a-bf91-4622-b382-5883866534ee.png)
+3. 인물 사진 업로드 <br/> ![image](https://user-images.githubusercontent.com/64758823/170308171-d41d2d84-7e33-4540-a054-04127748abfd.png)
+4. 합성 결과물 다운로드 <br/> ![image](https://user-images.githubusercontent.com/64758823/170308188-bc5c8425-ecac-4d15-8590-09d10f87fdbc.png)
+5. 궁온 갤러리 전시 <br/> ![image](https://user-images.githubusercontent.com/64758823/170308207-1bc2714f-57f3-48bd-8ce6-c219f7bc317d.png)
 
 ### 4. 기대효과
 
@@ -66,11 +66,5 @@
 - 비대면 온라인 서비스로 체험하고 나면 흥미를 높일 수 있어 직접 체험하기 위해 그곳으로 여행을 가는 사람들이 증가할 수 있다
 - Semantic Segmentation을 활용해 배경과 인물을 합성하여 다양한 목적으로 사진을 남길 수 있다.
 
-![image](https://user-images.githubusercontent.com/64758823/170308013-f3a672b4-69c8-46a2-90fd-19333930ce8d.png)
-![image](https://user-images.githubusercontent.com/64758823/170308069-a946793c-1ace-4907-9bfd-c0b74276dbf0.png)
-![image](https://user-images.githubusercontent.com/64758823/170308142-039eacb6-531b-42c3-97f4-277a4cb18910.png)
-![image](https://user-images.githubusercontent.com/64758823/170308158-6075e95a-bf91-4622-b382-5883866534ee.png)
-![image](https://user-images.githubusercontent.com/64758823/170308171-d41d2d84-7e33-4540-a054-04127748abfd.png)
-![image](https://user-images.githubusercontent.com/64758823/170308188-bc5c8425-ecac-4d15-8590-09d10f87fdbc.png)
-![image](https://user-images.githubusercontent.com/64758823/170308207-1bc2714f-57f3-48bd-8ce6-c219f7bc317d.png)
+
 
