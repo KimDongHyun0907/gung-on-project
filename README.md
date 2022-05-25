@@ -1,5 +1,5 @@
 # 2022-1 한국외대 캡스톤 프로젝트
-'궁궐과 함께 인생 한 컷' 궁온 서비스 
+## '궁궐과 함께 인생 한 컷' 궁온 서비스 
 <br/><br/>
 ### 1. 프로젝트 소개
  
@@ -47,12 +47,6 @@
 4. 합성 결과물 다운로드
 5. 궁온 갤러리 전시
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
-
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
 
 ### 4. 기대효과
 
