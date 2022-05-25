@@ -18,7 +18,7 @@
 - DB를 사용하여 로그인과 회원가입 기능을 이용해 회원 관리를 한다.
 
 ### 2. 프로젝트 정보
-  ##### 개발 환경
+##### 개발 환경
   - 프로그램 언어
  <br/> ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)<br/>     ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) <br/>![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)<br/> ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
  - 프레임 워크 
@@ -32,11 +32,10 @@
 - Image Segmentation 모델 : DeepLabV3
 - backbone : Resnet-101
 
-  ##### 흐름도
+##### 흐름도
 ㄴ
 
-
-  ##### 화면 설계
+##### 화면 설계
 ㄴ
 
 ### 3. 프로젝트 결과물
